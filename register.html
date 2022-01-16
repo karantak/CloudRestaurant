@@ -18,8 +18,11 @@
         margin: 0px;
     }
 
+    /* CSS REGISTER STARTS HERE */
+
     .container-register {
         position: absolute;
+        z-index: 3;
         margin: 0px 0px;
         height: 730px;
         width: 100%;
@@ -34,15 +37,6 @@
     }
 
     .form-register {
-        /* background-color: white;
-        width: 700px;
-        display: flex;
-        padding: 30px 10px;
-        flex-direction: column;
-        border: 2px solid black;
-        border-radius: 10px;
-        text-align: center; */
-
         background-color: white;
         width: 450px;
         display: flex;
@@ -73,10 +67,22 @@
         background-color: rgb(167, 65, 47);
         font-size: 23px;
     }
+
+    #btn-reg {
+        position: absolute;
+        top: 145px;
+        left: 930px;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: 400px;
+    }
+
+    /* CSS REGISTER ENDS HERE */
 </style>
 
 <body>
-    <div class="container-register">
+    <div id="containerregister" class="containerregister">
         <div class="register-box">
             <div class="form-register">
                 <!-- <p class="login-para">Welcome to our cloud Restaurant!!!</p> -->
@@ -86,12 +92,28 @@
                     <input class="reg-input" type="email" placeholder="Email">
                     <input class="reg-input" type="tel" placeholder="Mob No.">
                     <input class="reg-input" type="text" placeholder="Address">
-                    <input class="reg-input" id="register-submit-button"  onclick="document.location='Home.html'" type="button" value="Submit">
+                    <input class="reg-input" id="register-submit-button" onclick="document.location='Home.html'"
+                        type="button" value="Submit">
 
                 </form>
             </div>
         </div>
+        <button id="btn-reg" onclick="hide()">x</button>
     </div>
+
+    <script>
+        function hide() {
+            let btn = document.getElementById("btn-reg");
+            let para = document.getElementById("containerregister");
+            // logindiv.style.display = "none";
+            if (containerregister.style.display = "none") {
+                containerregister.style.display != "none";
+            }
+            else {
+                containerregister.style.display = "none"
+            }
+        }
+    </script>
 </body>
 
 </html>

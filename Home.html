@@ -23,6 +23,132 @@
             height: 105vh;
         }
 
+        /*  CSS FOR LOGIN */
+        .container-login {
+            position: absolute;
+            z-index: 3;
+            margin: 0px 0px;
+            height: 730px;
+            width: 100%;
+            background-color: transparent;
+            background-size: 100% 100%;
+        }
+
+        .login-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 12%;
+        }
+
+        .form-login {
+            background-color: white;
+            width: 450px;
+            display: flex;
+            padding: 30px 10px;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .log-input {
+            padding: 15px;
+            width: 70%;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        #login-submit-button {
+            padding: 8px 0px;
+            background-color: tomato;
+            font-size: 20px;
+            color: white;
+        }
+
+
+        #login-submit-button:hover {
+            background-color: rgb(167, 65, 47);
+            font-size: 23px;
+        }
+
+
+
+        #btn-login {
+            position: absolute;
+            top: 210px;
+            left: 930px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            font-weight: 400px;
+        }
+
+        /* CSS FOR LOGIN ENDS HERE */
+
+        /* CSS REGISTER STARTS HERE */
+
+        .container-register {
+            position: absolute;
+            z-index: 4;
+            margin: 0px 0px;
+            height: 730px;
+            width: 100%;
+            background-color: transparent;
+            background-size: 100% 100%;
+        }
+
+        .register-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 8%;
+        }
+
+        .form-register {
+            background-color: white;
+            width: 450px;
+            display: flex;
+            padding: 30px 10px;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .reg-input {
+            padding: 15px;
+            width: 70%;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        #register-submit-button {
+            padding: 8px 0px;
+            background-color: tomato;
+            font-size: 20px;
+            color: white;
+        }
+
+        #register-submit-button:hover {
+            background-color: rgb(167, 65, 47);
+            font-size: 23px;
+        }
+
+        #btn-reg {
+            position: absolute;
+            top: 145px;
+            left: 930px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            font-weight: 400px;
+        }
+
+        /* CSS REGISTER ENDS HERE */
+
         img {
             margin-top: 10px;
             height: 45px;
@@ -36,9 +162,9 @@
             position: sticky;
         }
 
-        .Nav-logo{
+        .Nav-logo {
             margin-left: 18px;
-            
+
         }
 
         .home-nav-left {
@@ -169,13 +295,64 @@
             transition: 0.2s;
         }
 
-        .btnmenu:hover{
+        .btnmenu:hover {
             padding: 40px 90px;
 
         }
     </style>
 
 <body>
+
+    <!-- login section starts here -->
+
+    <div id="logindiv" class="container-login">
+        <div class="login-box">
+            <div class="form-login">
+                <!-- <p class="login-para">Welcome to our cloud Restaurant!!!</p> -->
+                <h1 class="headlogin">Login</h1>
+                <form action="">
+                    <input class="log-input" type="text" placeholder="Username">
+                    <input class="log-input" type="tel" placeholder="Mob No.">
+                    <input class="log-input" id="login-submit-button" onclick="hide()"
+                        type="button" value="Submit">
+                    <p class="para-login">
+                        Not signed-up yet? <a href="register.html">Register</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <button id="btn-login" onclick="hide()">x</button>
+    </div>
+    <!-- login section ends here -->
+
+    <!-- Register section starts here -->
+    
+    <!-- <div id="containerregister" class="containerregister">
+        <div class="register-box">
+            <div class="form-register">
+                <h1>REGISTER</h1>
+                <form action="">
+                    <input class="reg-input" type="text" placeholder="Name">
+                    <input class="reg-input" type="email" placeholder="Email">
+                    <input class="reg-input" type="tel" placeholder="Mob No.">
+                    <input class="reg-input" type="text" placeholder="Address">
+                    <input class="reg-input" id="register-submit-button" onclick="document.location='Home.html'"
+                        type="button" value="Submit">
+
+                </form>
+            </div>
+        </div>
+        <button id="btn-reg" onclick="hidereg()">x</button>
+    </div> -->
+
+      <!-- Register section ends here -->
+    
+
+    <!-- HOME SECTION STARTS HERE -->
+
+    <!-- Navbar section starts here -->
+
+
     <div>
         <nav class="navbar">
             <ul class="navul">
@@ -194,6 +371,12 @@
             </ul>
         </nav>
     </div>
+
+     <!-- Navbar section ends here -->
+
+      <!-- Slider section starts here -->
+
+
     <div class="Carousel">
         <div class="img-slider">
             <div class="slide active">
@@ -230,17 +413,19 @@
                     </p>
                 </div>
             </div>
+ <!-- Slider section ends here -->
 
-
-
-            <div class="navigation">
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-            </div>
-        </div>
+ 
+ 
+ <div class="navigation">
+     <div class="btn"></div>
+     <div class="btn"></div>
+     <div class="btn"></div>
     </div>
+</div>
+</div>
 
+<!-- Button section starts here -->
     <div class="waytomenu">
         <section class="waytomenusection">
             <button class="btnmenu" onclick="document.location='Menu.html'">Starter</button>
@@ -249,7 +434,38 @@
         </section>
     </div>
 
+     <!-- Button section ends here -->
+
+
     <script>
+
+        function hide() {
+            let btn = document.getElementById("btn-login");
+            let para = document.getElementById("logindiv");
+            // logindiv.style.display = "none";
+            if (logindiv.style.display = "none") {
+                logindiv.style.display != "none";
+            }
+            else {
+                logindiv.style.display = "none"
+            }
+        }
+
+        function hidereg() {
+            let btn = document.getElementById("btn-reg");
+            let para = document.getElementById("containerregister");
+            // logindiv.style.display = "none";
+            if (containerregister.style.display = "none") {
+                containerregister.style.display != "none";
+            }
+            else {
+                containerregister.style.display = "none"
+            }
+        }
+
+
+
+
         var slides = document.querySelectorAll(".slide");
         var btns = document.querySelectorAll(".btn");
 
