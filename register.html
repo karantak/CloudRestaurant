@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUD RESTAURANT</title>
+
+</head>
+<style>
+    /* CSS RESET*/
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    .container-register {
+        position: absolute;
+        margin: 0px 0px;
+        height: 730px;
+        width: 100%;
+        background-color: transparent;
+        background-size: 100% 100%;
+    }
+
+    .register-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 8%;
+    }
+
+    .form-register {
+        /* background-color: white;
+        width: 700px;
+        display: flex;
+        padding: 30px 10px;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center; */
+
+        background-color: white;
+        width: 450px;
+        display: flex;
+        padding: 30px 10px;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .reg-input {
+        padding: 15px;
+        width: 70%;
+        margin: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    #register-submit-button {
+        padding: 8px 0px;
+        background-color: tomato;
+        font-size: 20px;
+        color: white;
+    }
+
+    #register-submit-button:hover {
+        background-color: rgb(167, 65, 47);
+        font-size: 23px;
+    }
+</style>
+
+<body>
+    <div class="container-register">
+        <div class="register-box">
+            <div class="form-register">
+                <!-- <p class="login-para">Welcome to our cloud Restaurant!!!</p> -->
+                <h1>REGISTER</h1>
+                <form action="">
+                    <input class="reg-input" type="text" placeholder="Name">
+                    <input class="reg-input" type="email" placeholder="Email">
+                    <input class="reg-input" type="tel" placeholder="Mob No.">
+                    <input class="reg-input" type="text" placeholder="Address">
+                    <input class="reg-input" id="register-submit-button" type="button" value="Submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

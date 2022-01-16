@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUD RESTAURANT</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+        }
+
+        img {
+            margin-top: 10px;
+            height: 45px;
+        }
+
+        ul {
+            margin: 0px;
+            display: flex;
+            background-color: black;
+            height: 60px;
+        }
+
+        .home-nav-left {
+            color: white;
+            margin: 16px 40px;
+            list-style-type: none;
+            font-size: 25px;
+        }
+
+        .home-nav-left a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .home-nav-left:hover {
+            font-size: 24px;
+        }
+
+        .home-nav-right {
+            position: relative;
+            left: 50%;
+            color: white;
+            margin: 16px 6px;
+            list-style-type: none;
+            font-size: 25px;
+        }
+
+        .home-nav-right a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .home-nav-right:hover {
+            font-size: 24px;
+        }
+
+        .Carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .img-slider {
+            position: relative;
+            width: 100%;
+            height: 510px;
+            background: black;
+        }
+
+        .img-slider .slide {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-slider .slide img {
+            z-index: 1;
+            width: 100%;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        .img-slider .slide .info {
+            position: absolute;
+            top: 0;
+            padding: 15px 30px;
+        }
+
+        .img-slider .slide .info h2 {
+            color: #fff;
+            font-size: 45px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .img-slider .slide .info p {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.4);
+            font-size: 16px;
+            width: 60%;
+            border-radius: 4px;
+        }
+
+        .img-slider .navigation {
+            z-index: 2;
+            position: absolute;
+            display: flex;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .img-slider .navigation .btn {
+            background: rgba(255, 255, 255, 0.5);
+            width: 12px;
+            height: 12px;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .waytomenu {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin: 20px 0px;
+            /* background-image: url("Home-Slider-2.png"); */
+        }
+
+        .btnmenu {
+            position: relative;
+            z-index: 2;
+            top: 300px;
+            margin: 0px 80px;
+            padding: 40px 80px;
+            background: white;
+            font-size: 40px;
+            border: 2px solid black;
+            border-radius: 10px;
+
+        }
+    </style>
+
+<body>
+    <div>
+        <nav>
+            <ul>
+                <img class="Nav-logo"
+                    src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png" />
+                <li class="home-nav-left"><a href="">Home</a></li>
+                <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
+                <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
+                <li class="home-nav-right">
+                    <a href="Login.html">Login</a>
+                </li>
+                <li class="home-nav-right">
+                    <a href="register.html">Signup</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="Carousel">
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="https://images.freekaamaal.com/post_images/1606817930.jpg" alt="" />
+                <div class="info">
+                    <h2>Welcome to our RESTAURANT</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Debitis, cumque illum provident possimus nemo
+                        tempora consequuntur in qui repudiandae voluptatem.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://www.yourphnompenh.com/order/wp-content/uploads/2020/12/Cover_idly_dosa_indai_restuarnt_in_yourphnompenh_online_ordering.jpg"
+                    alt="" />
+                <div class="info">
+                    <h2>Slide 1</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Debitis, cumque illum provident possimus nemo
+                        tempora consequuntur in qui repudiandae voluptatem.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://static.toiimg.com/photo/72023714.cms" alt="" />
+                <div class="info">
+                    <h2>Slide 1</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Debitis, cumque illum provident possimus nemo
+                        tempora consequuntur in qui repudiandae voluptatem.
+                    </p>
+                </div>
+            </div>
+            
+    <div class="waytomenu">
+        <section class="waytomenusection">
+            <button class="btnmenu" onclick="document.location='Menu.html'">Starter</button>
+            <button class="btnmenu" onclick="document.location='Menu.html'">North</button>
+            <button class="btnmenu" onclick="document.location='Menu.html'">South</button>
+        </section>
+    </div>
+
+            <div class="navigation">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+<!-- 
+    <div class="waytomenu">
+        <section class="waytomenusection">
+            <button class="btnmenu" onclick="document.location='Menu.html'">Starter</button>
+            <button class="btnmenu" onclick="document.location='Menu.html'">North</button>
+            <button class="btnmenu" onclick="document.location='Menu.html'">South</button>
+        </section>
+    </div> -->
+
+    <script>
+        var slides = document.querySelectorAll(".slide");
+        var btns = document.querySelectorAll(".btn");
+
+        let currentSlide = 0;
+
+        var manualNav = function (manual) {
+            console.log(manual);
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+            ++currentSlide;
+        };
+
+        console.log(btns);
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        setInterval(() => {
+            manualNav((currentSlide + 1) % 3);
+        }, 3000);
+    </script>
+</body>
+
+</html>
