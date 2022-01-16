@@ -6,18 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOUD RESTAURANT</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
             margin: 0px;
             padding: 0px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
             margin: 0px;
             padding: 0px;
-            height: 100vh;
+            height: 105vh;
         }
 
         img {
@@ -25,11 +28,21 @@
             height: 45px;
         }
 
-        ul {
+        .navbar{
+            /* position: fixed; */
+            /* top: 0px; */
+        }
+        .navul {
             margin: 0px;
             display: flex;
             background-color: black;
             height: 60px;
+            position: sticky;
+        }
+
+        .Nav-logo{
+            margin-left: 18px;
+            
         }
 
         .home-nav-left {
@@ -103,13 +116,14 @@
 
         .img-slider .slide .info {
             position: absolute;
-            top: 0;
+            top: 70px;
+            left: 70px;
             padding: 15px 30px;
         }
 
         .img-slider .slide .info h2 {
             color: #fff;
-            font-size: 45px;
+            font-size: 60px;
             text-transform: uppercase;
             font-weight: 800;
         }
@@ -144,25 +158,31 @@
             display: flex;
             width: 100%;
             justify-content: center;
-            margin: 20px 0px;
+            margin: 10px 0px;
             /* background-image: url("Home-Slider-2.png"); */
         }
 
         .btnmenu {
+            color: white;
             margin: 0px 80px;
             padding: 40px 80px;
-            background: white;
+            background: black;
             font-size: 40px;
             border: 2px solid black;
             border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .btnmenu:hover{
+            padding: 40px 90px;
 
         }
     </style>
 
 <body>
     <div>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="navul">
                 <img class="Nav-logo"
                     src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png" />
                 <li class="home-nav-left"><a href="">Home</a></li>
@@ -182,7 +202,7 @@
             <div class="slide active">
                 <img src="https://images.freekaamaal.com/post_images/1606817930.jpg" alt="" />
                 <div class="info">
-                    <h2>Welcome to our RESTAURANT</h2>
+                    <h2>CLOUD RESTAURANT</h2>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Debitis, cumque illum provident possimus nemo
@@ -213,8 +233,8 @@
                     </p>
                 </div>
             </div>
-            
-   
+
+
 
             <div class="navigation">
                 <div class="btn"></div>

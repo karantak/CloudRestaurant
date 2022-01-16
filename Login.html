@@ -94,7 +94,7 @@
                 <form action="">
                     <input class="log-input" type="text" placeholder="Username">
                     <input class="log-input" type="tel" placeholder="Mob No.">
-                    <input class="log-input" id="login-submit-button" type="button" value="Submit">
+                    <input class="log-input" id="login-submit-button"  onclick="document.location='Home.html'" type="button" value="Submit">
                     <p class="para-login">
                         Not signed-up yet? <a href="register.html">Register</a>
                     </p>
@@ -104,20 +104,9 @@
             </div>
         </div>
     </div>
-    <button id="btn-login" onclick="hide()">x</button>
+    <button id="btn-login" onclick="document.location='Home.html'">x</button>
 
-    <script>
-        function hide() {
-            //   let btn = document.getElementById("btn");
-            //   let para = document.getElementById("para");
-            if (login-div.style.display != "none") {
-                login-div.style.display = "none";
-            }
-            else {
-                login-div.style.display = "block"
-            }
-        }
-    </script>
+   
 </body>
 
 </html>
