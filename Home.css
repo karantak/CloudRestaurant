@@ -1,0 +1,167 @@
+img {
+    margin-top: 10px;
+    height: 45px;
+}
+
+.navul {
+    margin: 0px;
+    display: flex;
+    background-color: black;
+    height: 60px;
+    position: sticky;
+}
+
+.Nav-logo {
+    margin-left: 18px;
+
+}
+
+.home-nav-left {
+    color: white;
+    margin: 16px 40px;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.home-nav-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.home-nav-left:hover {
+    font-size: 24px;
+}
+
+.home-nav-right {
+    position: relative;
+    left: 35%;
+    color: white;
+    margin: 16px 6px;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.home-nav-right a {
+    text-decoration: none;
+    color: white;
+}
+
+.home-nav-right:hover {
+    font-size: 24px;
+}
+
+.Carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.img-slider {
+    position: relative;
+    width: 100%;
+    height: 510px;
+    background: black;
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-slider .slide img {
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.img-slider .slide .info {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    padding: 15px 30px;
+}
+
+.img-slider .slide .info h2 {
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.img-slider .slide .info p {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+.img-slider .navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.waytomenu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0px;
+    /* background-image: url("Home-Slider-2.png"); */
+}
+
+.btnmenu {
+    color: white;
+    margin: 0px 80px;
+    padding: 40px 80px;
+    background: black;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btnmenu:hover {
+    padding: 40px 90px;
+}
+
+@media only screen and (max-width: 1326px){
+    body{
+        width: max-content;
+    }
+
+    .home-nav-right {
+        position: relative;
+        left: 30%;
+        color: white;
+        margin: 16px 6px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+
+    
+    
+}
