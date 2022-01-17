@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -9,6 +11,10 @@ body {
     margin: 0px;
     padding: 0px;
     height: max-content;
+}
+
+.bookfile{
+    margin-top: 7%;
 }
 
 .menustarter {
@@ -94,11 +100,39 @@ body {
     color: white;
 }
 
-.menuproceed {
-    position: sticky;
-    top: 700px;
+.menuproceed{
+    color: black;
+    position: fixed;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+     /* width: 180px;
+    height: 45px;
+    /* line-height: 45px; */
+    bottom: 8%;
+    right: 8%;
+
+
 }
 
+.menuproceed a{
+    color: white;
+    text-decoration: none;
+}
+
+.menuproceed:hover{
+    background-color: white;
+    border: 1px solid black;
+
+}
+.menuproceed a:hover{
+    color: black;
+}
 
 @media only screen and (max-width: 1350px){
     .home-nav-right {
@@ -112,6 +146,10 @@ body {
 }
 
 @media only screen and (max-width: 1040px){
+
+    .bookfile{
+        margin-top: 10%;
+    }
 
     .home-nav-right {
         position: relative;
@@ -142,9 +180,34 @@ body {
         text-align: center;
         font-weight: 800;
     }
+
+    .menuproceed{
+        color: black;
+        position: fixed;
+        text-decoration: none;
+        background-color: black;
+        padding: 7px 14px;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+         /* width: 180px;
+        height: 45px;
+        /* line-height: 45px; */
+        bottom: 8%;
+        right: 8%;
+    
+    
+    }
 }
 
 @media only screen and (max-width: 880px){
+
+    .bookfile{
+        margin-top: 10%;
+    }
+
     .home-nav-left {
         font-size: 20px;
     }
@@ -155,6 +218,11 @@ body {
 }
 
 @media only screen and (max-width: 800px){
+
+    .bookfile{
+        margin-top: 10%;
+    }
+
     .home-nav-left {
         font-size: 17px;
     }
@@ -165,6 +233,10 @@ body {
 }
 
 @media only screen and (max-width: 800px){
+
+    .bookfile{
+        margin-top: 15%;
+    }
 
    
     .home-nav-left {

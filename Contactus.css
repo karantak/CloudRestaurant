@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 105vh;
+}
+
+
+.contactcontainer{
+   
+    border: 5px solid black;
+    margin: 7% 100px;
+    border-radius: 10px;
+   
+}
+
+.contactinside{
+    display: block;
+    margin: 20px;
+    padding: 10px 10%;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#writebox{
+    padding: 100px 38%;
+
+}
+
+.contactinsidelabel{
+    font-size: 40px;
+    margin-left: 15px;
+}

@@ -1,14 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
 img {
     margin-top: 10px;
     height: 45px;
 }
 
+.navbar{
+    position: fixed;
+    top:0%;
+    z-index: 4;
+    
+}
 .navul {
     margin: 0px;
     display: flex;
     background-color: black;
     height: 60px;
-    position: sticky;
+    width: 169%;
 }
 
 .Nav-logo {
@@ -165,6 +177,13 @@ img {
         height: 100%;
     }
  
+    .navbar{
+        position: relative;
+        top:0%;
+        z-index: 4;
+        
+    }
+
     .Nav-logo{
 display: none;
     }
