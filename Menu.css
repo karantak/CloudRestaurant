@@ -1,0 +1,231 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: max-content;
+}
+
+.menustarter {
+    color: white;
+    margin: 40px 70px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-image: url("https://images.freekaamaal.com/post_images/1606817930.jpg");
+    background-size: 1355x 789px;
+    padding: 20px 20px;
+
+}
+
+.menunorth {
+    color: white;
+    margin: 40px 70px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-image: url("https://static.toiimg.com/photo/72023714.cms");
+    background-size: 2500px 1200px;
+    padding: 20px 20px;
+
+}
+
+.menusouth {
+    color: white;
+    margin: 40px 70px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-image: url("https://images.freekaamaal.com/post_images/1606817930.jpg");
+    background-size: 1355px 789px;
+
+    padding: 20px 20px;
+
+}
+
+.bookhead {
+    /* border: 2px solid black;
+    border-radius: 5px; */
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+.bookul {
+    margin: 12px 50px;
+}
+
+.menuli {
+    margin: 0px 30px;
+    font-size: 30px;
+    list-style: none;
+    font-weight: 1000;
+}
+
+.menuinputli {
+    position: absolute;
+    right: 300px;
+    margin-left: 50%;
+    padding: 0px 0px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.menubtnli {
+    position: absolute;
+    right: 150px;
+    padding: 5px 30px;
+    margin: 0px 10px;
+
+}
+
+.menuadditem {
+    display: flex;
+    margin: 15px 0px;
+
+}
+
+
+.menubtnli:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.menuproceed {
+    position: sticky;
+    top: 700px;
+}
+
+
+@media only screen and (max-width: 1350px){
+    .home-nav-right {
+        position: relative;
+        left:13%;
+        color: white;
+        margin: 16px 6px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1040px){
+
+    .home-nav-right {
+        position: relative;
+        left:0%;
+        color: white;
+        margin: 16px 6px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+
+    .menuadditem{
+        display: block;
+        margin: 40px 0px;
+    }
+
+    .menubtnli {
+        
+        padding: 5px 30px;
+        margin: 0px 10px;
+    }
+
+    .menuinputli {
+        /* position: absolute;
+        right: 300px; */
+        /* margin-left: 50%; */
+        padding: 0px 0px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .home-nav-left {
+        font-size: 20px;
+    }
+    .home-nav-right {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .home-nav-left {
+        font-size: 17px;
+    }
+    .home-nav-right {
+        font-size: 17px;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+   
+    .home-nav-left {
+        font-size: 14px;
+        margin: 16px 25px;
+      
+    }
+    .home-nav-right {
+        font-size: 14px;
+        margin: 16px 25px;
+       
+    }
+}
+
+/* @media only screen and (max-width: 650px){
+
+    .menubtnli{
+        display: block;
+        margin: 0px 200px;
+    }
+} */
+
+@media only screen and (max-width: 325px){
+
+    body{
+        height: 100%;
+    }
+ 
+    .Nav-logo{
+display: none;
+    }
+
+.navul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 20%;
+  
+}
+
+.navul li{
+    font-size: 60px;
+}
+
+.home-nav-right {
+    position: relative;
+    left:3%;
+    color: white;
+    margin: 16px 6px;
+    list-style-type: none;
+    font-size: 25px;
+}
+.btnmenu {
+    color: white;
+    margin: 0px 4px;
+    padding: 34px 59px;
+    background: black;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+}

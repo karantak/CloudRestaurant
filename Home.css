@@ -102,7 +102,7 @@ img {
 .img-slider .slide .info p {
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
-    font-size: 16px;
+    font-size: 25px;
     width: 60%;
     border-radius: 4px;
 }
@@ -147,21 +147,57 @@ img {
 .btnmenu:hover {
     padding: 40px 90px;
 }
-
+/* 
 @media only screen and (max-width: 1326px){
     body{
         width: max-content;
     }
 
     .home-nav-right {
-        position: relative;
+        
         left: 30%;
-        color: white;
-        margin: 16px 6px;
-        list-style-type: none;
-        font-size: 25px;
+       
+} */
+
+@media only screen and (max-width: 325px){
+
+    body{
+        height: 100%;
+    }
+ 
+    .Nav-logo{
+display: none;
     }
 
-    
-    
+.navul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 20%;
+  
+}
+
+.navul li{
+    font-size: 60px;
+}
+
+.home-nav-right {
+    position: relative;
+    left:3%;
+    color: white;
+    margin: 16px 6px;
+    list-style-type: none;
+    font-size: 25px;
+}
+.btnmenu {
+    color: white;
+    margin: 0px 4px;
+    padding: 34px 59px;
+    background: black;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
 }

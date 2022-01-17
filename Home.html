@@ -9,9 +9,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
         rel="stylesheet">
-<link rel="stylesheet" href="Home.css">
-<link rel="stylesheet" href="Login.css">
-<link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Register.css">
     <style>
         * {
             margin: 0px;
@@ -25,6 +25,15 @@
             height: 105vh;
         }
 
+        @media only screen and (max-width: 1326px) {
+            body {
+                width: max-content;
+            }
+
+            .home-nav-right {
+                left: 30%;
+            }
+        }
     </style>
 
 <body>
@@ -39,8 +48,7 @@
                 <form action="">
                     <input class="log-input" type="text" placeholder="Username">
                     <input class="log-input" type="tel" placeholder="Mob No.">
-                    <input class="log-input" id="login-submit-button" onclick="hide()"
-                        type="button" value="Submit">
+                    <input class="log-input" id="login-submit-button" onclick="hide()" type="button" value="Submit">
                     <p class="para-login">
                         Not signed-up yet? <a href="register.html">Register</a>
                     </p>
@@ -52,7 +60,7 @@
     <!-- login section ends here -->
 
     <!-- Register section starts here -->
-    
+
     <!-- <div id="containerregister" class="containerregister">
         <div class="register-box">
             <div class="form-register">
@@ -71,8 +79,8 @@
         <button id="btn-reg" onclick="hidereg()">x</button>
     </div> -->
 
-      <!-- Register section ends here -->
-    
+    <!-- Register section ends here -->
+
 
     <!-- HOME SECTION STARTS HERE -->
 
@@ -98,9 +106,9 @@
         </nav>
     </div>
 
-     <!-- Navbar section ends here -->
+    <!-- Navbar section ends here -->
 
-      <!-- Slider section starts here -->
+    <!-- Slider section starts here -->
 
 
     <div class="Carousel">
@@ -139,19 +147,19 @@
                     </p>
                 </div>
             </div>
- <!-- Slider section ends here -->
+            <!-- Slider section ends here -->
 
- 
- 
- <div class="navigation">
-     <div class="btn"></div>
-     <div class="btn"></div>
-     <div class="btn"></div>
+
+
+            <div class="navigation">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 
-<!-- Button section starts here -->
+    <!-- Button section starts here -->
     <div class="waytomenu">
         <section class="waytomenusection">
             <button class="btnmenu" onclick="document.location='Menu.html'">Starter</button>
@@ -160,7 +168,7 @@
         </section>
     </div>
 
-     <!-- Button section ends here -->
+    <!-- Button section ends here -->
 
 
     <script>
