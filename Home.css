@@ -66,6 +66,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3%;
 }
 
 .slide {
@@ -193,6 +194,7 @@ display: none;
     flex-direction: column;
     text-align: left;
     height: 20%;
+    width: 100%;
   
 }
 
@@ -218,5 +220,7 @@ display: none;
     border-radius: 10px;
     transition: 0.2s;
 }
+
+
 
 }

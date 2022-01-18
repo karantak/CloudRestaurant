@@ -51,6 +51,7 @@ body {
 
 }
 
+
 .bookhead {
     /* border: 2px solid black;
     border-radius: 5px; */
@@ -92,6 +93,10 @@ body {
     display: flex;
     margin: 15px 0px;
 
+}
+
+.menuadditem li{
+    background: rgba(0, 0, 0, 0.2);
 }
 
 

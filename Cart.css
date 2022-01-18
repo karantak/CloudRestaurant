@@ -1,0 +1,94 @@
+.cartleft{
+
+    margin: 6% 5%;
+    padding: 4% 10%;
+    padding-top: 0%;
+    border: 3px solid black;
+    border-radius: 3%;
+    display: inline-block;
+    justify-content: left ;
+    /* background-image: url("https://images.freekaamaal.com/post_images/1606817930.jpg");
+    background-size: 1276px 679px; */
+
+}
+
+.cartinsideleft{
+    position: relative;
+    left: -40%;
+    font-size: 13px;
+    line-height: 50px;
+    /* color: white; */
+   
+
+}
+
+.cartinsideleft h2{
+    font-size: 30px;
+    /* background: rgba(0, 0, 0, 0.2); */
+}
+
+.cartinside{
+    position: relative;
+    top: 30%;
+   padding: 3% 10%;
+}
+
+#cartname{
+    padding: 2% 20%;
+    padding-left: 5%;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#cartadd{
+    padding: 15% 5%;
+   width: 160%;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    }
+
+#cartnewadd{
+    padding: 15% 5%;
+    width: 160%;
+    padding-left: 5%;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    }
+
+
+
+
+.cartorder{
+    color: black;
+    position: fixed;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+     /* width: 180px;
+    height: 45px;
+    /* line-height: 45px; */
+    bottom: 8%;
+    right: 8%;
+}
+
+.cartorder a{
+    color: white;
+    text-decoration: none;
+}
+
+.cartorder:hover{
+    background-color: rgb(199, 192, 192);
+    border: 2px solid black;
+
+}
+.cartorder a:hover{
+    color: black;
+}
