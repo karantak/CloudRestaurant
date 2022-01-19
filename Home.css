@@ -4,6 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 105vh;
+}
+
 img {
     margin-top: 10px;
     height: 45px;

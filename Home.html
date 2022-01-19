@@ -10,21 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="Login.css">
-    <link rel="stylesheet" href="Register.css">
+    
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            height: 105vh;
-        }
-
         @media only screen and (max-width: 1326px) {
             body {
                 width: max-content;
@@ -37,9 +24,9 @@
     </style>
 
 <body>
-    <!--............................ HOME SECTION STARTS HERE -->
+    <!--............................... HOME SECTION STARTS HERE .........................-->
 
-    <!--............................. Navbar section starts here -->
+    <!--............................. Navbar section starts here .........................-->
 
     <div>
         <nav class="navbar">
@@ -58,9 +45,9 @@
         </nav>
     </div>
 
-    <!--............................... Navbar section ends here -->
+    <!--............................... Navbar section ends here ..............................-->
 
-    <!--................................Slider section starts here -->
+    <!--................................Slider section starts here ..............................-->
 
 
     <div class="Carousel">
@@ -99,8 +86,8 @@
                     </p>
                 </div>
             </div>
-            <!--.................... .......Slider section ends here -->
-            <!--............................ Slider button section ends here -->
+            <!--.................... ...........Slider section ends here.................................... -->
+            <!--............................ Slider button section ends here .......................-->
             <div class="navigation">
                 <div class="btn"></div>
                 <div class="btn"></div>
@@ -109,44 +96,19 @@
         </div>
     </div>
 
-    <!--............................. Button section starts here -->
+    <!--............................. Button section starts here......................... -->
     <div class="waytomenu">
         <section class="waytomenusection">
             <button class="btnmenu stater" onclick="document.location='Menu.html'">Starter</button>
-            <button class="btnmenu north" onclick="document.location='Menu.html'">North</button>
-            <button class="btnmenu south" onclick="document.location='Menu.html'">South</button>
+            <button class="btnmenu north" onclick="document.location='Menu.html'">North </button>
+            <button class="btnmenu south" onclick="document.location='Menu.html'">South </button>
         </section>
     </div>
 
-    <!--............................. Button section ends here -->
+    <!--............................. Button section ends here ...........................-->
 
-
+<!-- ........................JAVASCRIPT STARTS HERE ...........................-->
     <script>
-
-        function hide() {
-            let btn = document.getElementById("btn-login");
-            let para = document.getElementById("logindiv");
-            // logindiv.style.display = "none";
-            if (logindiv.style.display = "none") {
-                logindiv.style.display != "none";
-            }
-            else {
-                logindiv.style.display = "none"
-            }
-        }
-
-        function hidereg() {
-            let btn = document.getElementById("btn-reg");
-            let para = document.getElementById("containerregister");
-            // logindiv.style.display = "none";
-            if (containerregister.style.display = "none") {
-                containerregister.style.display != "none";
-            }
-            else {
-                containerregister.style.display = "none"
-            }
-        }
-
 
         var slides = document.querySelectorAll(".slide");
         var btns = document.querySelectorAll(".btn");

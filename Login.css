@@ -1,7 +1,14 @@
+ /* CSS RESET*/ 
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
 .container-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     margin: 0px 0px;
     height: 730px;
     width: 100%;
@@ -35,11 +42,6 @@
     font-size: 15px;
 }
 
-.forgot-login {
-    text-decoration: none;
-    color: black;
-}
-
 #login-submit-button {
     padding: 8px 0px;
     background-color: tomato;
@@ -47,6 +49,10 @@
     color: white;
 }
 
+#login-submit-button:hover {
+    background-color: rgb(167, 65, 47);
+    font-size: 23px;
+}
 
 #login-submit-button:hover {
     background-color: rgb(167, 65, 47);
@@ -56,7 +62,7 @@
 
 
 #btn-login {
-    position: relative;
+    position: absolute;
     top: 210px;
     left: 930px;
     background-color: transparent;

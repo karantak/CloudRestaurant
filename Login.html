@@ -6,88 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLOUD RESTAURANT</title>
+    <link rel="stylesheet" href="Login.css">
 
 </head>
-<style>
-    /* CSS RESET*/
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0px;
-    }
-
-    .container-login {
-        position: absolute;
-        margin: 0px 0px;
-        height: 730px;
-        width: 100%;
-        background-color: transparent;
-        background-size: 100% 100%;
-    }
-
-    .login-box {
-        display: flex;
-        justify-content: center;
-        margin-top: 12%;
-    }
-
-    .form-login {
-        background-color: white;
-        width: 450px;
-        display: flex;
-        padding: 30px 10px;
-        flex-direction: column;
-        border: 2px solid black;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .log-input {
-        padding: 15px;
-        width: 70%;
-        margin: 10px;
-        border: 2px solid black;
-        border-radius: 10px;
-        font-size: 15px;
-    }
-
-    #login-submit-button {
-        padding: 8px 0px;
-        background-color: tomato;
-        font-size: 20px;
-        color: white;
-    }
-
-    #login-submit-button:hover {
-        background-color: rgb(167, 65, 47);
-        font-size: 23px;
-    }
-
-    #login-submit-button:hover {
-        background-color: rgb(167, 65, 47);
-        font-size: 23px;
-    }
-
-
-
-    #btn-login {
-        position: absolute;
-        top: 210px;
-        left: 930px;
-        background-color: transparent;
-        border: none;
-        font-size: 20px;
-        font-weight: 400px;
-    }
-</style>
 
 <body>
     <div id="logindiv" class="container-login">
         <div class="login-box">
             <div class="form-login">
-                <!-- <p class="login-para">Welcome to our cloud Restaurant!!!</p> -->
                 <h1 class="headlogin">Login</h1>
                 <form action="">
                     <input class="log-input" type="text" placeholder="Username">
@@ -104,13 +30,12 @@
     </div>
 
 
-
+<!-- ........................JAVASCRIPT STARTS HERE ...........................-->
 
     <script>
         function hide() {
             let btn = document.getElementById("btn-login");
             let para = document.getElementById("logindiv");
-            // logindiv.style.display = "none";
             if (logindiv.style.display != "none") {
                 logindiv.style.display = "none";
             }
@@ -118,15 +43,6 @@
                 logindiv.style.display = "block"
             }
         }
-
-        // logindiv.addEventListener('mouseover', function run() {
-        //     console.log('mouseover Inside')
-        // });
-
-        // logindiv.addEventListener('mouseout', function run() {
-        //     console.log('mouseover now went outside')
-
-        // });
 
     </script>
 </body>
