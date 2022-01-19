@@ -1,3 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
 .cartleft{
 
     margin: 6% 5%;
@@ -16,7 +23,7 @@
     position: relative;
     left: -40%;
     font-size: 13px;
-    line-height: 50px;
+    line-height: 60px;
     /* color: white; */
    
 

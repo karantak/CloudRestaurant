@@ -73,11 +73,9 @@ body {
 
 .menuliprice{
     position: absolute;
-    z-index: 4;
-    right: 650px;
+    right: 370px;
     list-style: none;
-    margin-left: 30%;
-    padding: 0px 0px;
+    /* margin-top: 30%; */
     font-size: 30px;
     text-align: center;
     font-weight: 800;
@@ -85,19 +83,22 @@ body {
 
 .menuinputli {
     position: absolute;
-    right: 300px;
-    margin-left: 50%;
+    right: 260px;
+    margin-top: 6px;
+    width: 5%;
     padding: 0px 0px;
     font-size: 20px;
     text-align: center;
     font-weight: 800;
 }
 
+
 .menubtnli {
     position: absolute;
     right: 150px;
-    padding: 5px 30px;
-    margin: 0px 10px;
+    padding: 5px 25px;
+    /* margin: 0px 10px; */
+    margin-top: 6px;
 
 }
 
@@ -269,13 +270,22 @@ body {
     }
 }
 
-/* @media only screen and (max-width: 650px){
+@media only screen and (max-width: 650px){
+    .menuliprice{
+        position: absolute;
+        z-index: 4;
 
-    .menubtnli{
-        display: block;
-        margin: 0px 200px;
+        right: 350px;
+        list-style: none;
+        margin-left: 30%;
+        padding-bottom: 25px;
+        padding: 0px 0px;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 800;
     }
-} */
+
+}
 
 @media only screen and (max-width: 325px){
 
