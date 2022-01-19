@@ -13,14 +13,14 @@ img {
     position: fixed;
     top:0%;
     z-index: 4;
-    
+    width: 100%;
 }
 .navul {
     margin: 0px;
     display: flex;
     background-color: black;
     height: 60px;
-    width: 169%;
+    width: 100%;
 }
 
 .Nav-logo {
@@ -157,7 +157,13 @@ img {
     transition: 0.2s;
 }
 
-.btnmenu:hover {
+.stater:hover {
+    padding: 40px 90px;
+}
+.north:hover {
+    padding: 40px 90px;
+}
+.south:hover {
     padding: 40px 90px;
 }
 /* 
