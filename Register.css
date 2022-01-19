@@ -11,7 +11,7 @@
 .register-box {
     display: flex;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .form-register {
@@ -48,7 +48,7 @@
 
 #btn-reg {
     position: absolute;
-    top: 145px;
+    top: 105px;
     left: 930px;
     background-color: transparent;
     border: none;

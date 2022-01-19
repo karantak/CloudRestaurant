@@ -18,91 +18,31 @@
     body {
         margin: 0px;
     }
-
-    /* CSS REGISTER STARTS HERE */
-/* 
-    .container-register {
-        position: absolute;
-        z-index: 3;
-        margin: 0px 0px;
-        height: 730px;
-        width: 100%;
-        background-color: transparent;
-        background-size: 100% 100%;
-    }
-
-    .register-box {
-        display: flex;
-        justify-content: center;
-        margin-top: 8%;
-    }
-
-    .form-register {
-        background-color: white;
-        width: 450px;
-        display: flex;
-        padding: 30px 10px;
-        flex-direction: column;
-        border: 2px solid black;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .reg-input {
-        padding: 15px;
-        width: 70%;
-        margin: 10px;
-        border: 2px solid black;
-        border-radius: 10px;
-        font-size: 15px;
-    }
-
-    #register-submit-button {
-        padding: 8px 0px;
-        background-color: tomato;
-        font-size: 20px;
-        color: white;
-    }
-
-    #register-submit-button:hover {
-        background-color: rgb(167, 65, 47);
-        font-size: 23px;
-    }
-
-    #btn-reg {
-        position: absolute;
-        top: 145px;
-        left: 930px;
-        background-color: transparent;
-        border: none;
-        font-size: 20px;
-        font-weight: 400px;
-    } */
-
-    /* CSS REGISTER ENDS HERE */
 </style>
 
 <body>
     <div id="containerregister" class="containerregister">
         <div class="register-box">
             <div class="form-register">
-                <!-- <p class="login-para">Welcome to our cloud Restaurant!!!</p> -->
                 <h1>REGISTER</h1>
                 <form action="">
                     <input class="reg-input" type="text" placeholder="Name">
                     <input class="reg-input" type="email" placeholder="Email">
                     <input class="reg-input" type="tel" placeholder="Mob No.">
                     <input class="reg-input" type="text" placeholder="Address">
+                    <input class="reg-input" type="password" placeholder="Password">
                     <input class="reg-input" id="register-submit-button" onclick="document.location='Home.html'"
                         type="button" value="Submit">
-
                 </form>
             </div>
         </div>
         <button id="btn-reg" onclick="document.location='Home.html'">x</button>
     </div>
 
-    <script>
+
+
+    <!-- ..............................SCRIPT STARTS HERE.................................. -->
+<script>
         function hide() {
             let btn = document.getElementById("btn-reg");
             let para = document.getElementById("containerregister");

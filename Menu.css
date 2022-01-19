@@ -71,6 +71,18 @@ body {
     font-weight: 1000;
 }
 
+.menuliprice{
+    position: absolute;
+    z-index: 4;
+    right: 650px;
+    list-style: none;
+    margin-left: 30%;
+    padding: 0px 0px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+
 .menuinputli {
     position: absolute;
     right: 300px;
@@ -92,12 +104,13 @@ body {
 .menuadditem {
     display: flex;
     margin: 15px 0px;
-
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.menuadditem li{
+
+/* .menuadditem li{
     background: rgba(0, 0, 0, 0.2);
-}
+} */
 
 
 .menubtnli:hover {

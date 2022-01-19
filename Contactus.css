@@ -12,12 +12,13 @@ body {
 
 
 .contactcontainer{
-   
+   display: flex;
+   flex-direction: column;
     border: 5px solid black;
     margin: 7% 100px;
     border-radius: 10px;
-   
 }
+
 
 .contactinside{
     display: block;
@@ -29,7 +30,7 @@ body {
 }
 
 #writebox{
-    padding: 100px 38%;
+    width: 70%;
 
 }
 
@@ -37,3 +38,13 @@ body {
     font-size: 40px;
     margin-left: 15px;
 }
+
+.othercontacts{
+    margin: 0px auto;
+   
+}
+
+.othercontacts img{
+    margin: 10px 30px;
+}
+
