@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Home.css" />
+        <link rel="stylesheet" href="Cart.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="Cart.css">
-
-
-</head>
-
-<body>
-
-      <!--............................. Navbar section starts here .........................-->
-    <div>
-        <nav class="navbar">
-            <ul class="navul">
-                <img class="Nav-logo"
-                    src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png" />
-                <li class="home-nav-left"><a href="Home.html">Home</a></li>
-                <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
-                <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
-                <li class="home-nav-left"><a href="Contactus.html">Contact us</a></li>
-                <li class="home-nav-right">
-                    <a href="Login.html">Login</a>
-                </li>
-                <li class="home-nav-right">
-                    <a href="register.html">Signup</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-      <!--............................... Navbar section ends here ..............................-->
-
-      <!-- ..............................LEFT SECTION STARTS HERE............................. -->
-    <div class="cartleft">
-        <div class="cartinsideleft">
-            <h2 class="cartinside">Name</h2>
-            <input class="cartinside" id="cartname" type="text" placeholder="Name">
-            <h2 class="cartinside">Address</h2>
-            <input class="cartinside" id="cartadd" type="text" placeholder="Address">
-            <h2 class="cartinside">New Address</h2>
-            <input class="cartinside" id="cartnewadd" type="text" placeholder="New Address">
+    <body>
+        <!--............................. Navbar section starts here .........................-->
+        <div>
+            <nav class="navbar">
+                <ul class="navul">
+                    <img
+                        class="Nav-logo"
+                        src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+                    />
+                    <li class="home-nav-left"><a href="Home.html">Home</a></li>
+                    <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
+                    <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
+                    <li class="home-nav-left">
+                        <a href="Contactus.html">Contact us</a>
+                    </li>
+                    <li class="home-nav-right notLoggedIn">
+                        <a href="Login.html">Login</a>
+                    </li>
+                    <li class="home-nav-right notLoggedIn">
+                        <a href="register.html">Signup</a>
+                    </li>
+                    <li class="home-nav-right loggedIn">
+                        <p id="username"></p>
+                    </li>
+                    <li class="home-nav-right loggedIn">
+                        <input
+                            type="button"
+                            onclick="logout()"
+                            value="Logout"
+                        />
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-     <!-- ..............................LEFT SECTION ENDS HERE............................. -->
 
-<!-- ....................................VERTICAL LINE IN THE CENTER........................ -->
-    <div class="vl"></div>
-<!-- ....................................VERTICAL LINE ENDS IN THE CENTER.................. -->
+        <!--............................... Navbar section ends here ..............................-->
 
-<!-- ..........................................RIGHT SECTION STARTS HERE.................... -->
-    <div class="cartright">
-        <div class="cartrightinside">
-
+        <!-- ..............................LEFT SECTION STARTS HERE............................. -->
+        <div class="cartleft">
+            <div class="cartinsideleft">
+                <h2 class="cartinside">Name</h2>
+                <input
+                    class="cartinside"
+                    id="cartname"
+                    type="text"
+                    placeholder="Name"
+                />
+                <h2 class="cartinside">Address</h2>
+                <input
+                    class="cartinside"
+                    id="cartadd"
+                    type="text"
+                    placeholder="Address"
+                />
+                <h2 class="cartinside">New Address</h2>
+                <input
+                    class="cartinside"
+                    id="cartnewadd"
+                    type="text"
+                    placeholder="New Address"
+                />
+            </div>
         </div>
-    </div>
+        <!-- ..............................LEFT SECTION ENDS HERE............................. -->
 
-    <div>
-        <button class="cartorder">
-            <a href="Cart.html">Order Now</a>
-        </button>
-    </div>
+        <!-- ....................................VERTICAL LINE IN THE CENTER........................ -->
+        <div class="vl"></div>
+        <!-- ....................................VERTICAL LINE ENDS IN THE CENTER.................. -->
 
-</body>
+        <!-- ..........................................RIGHT SECTION STARTS HERE.................... -->
+        <div class="cartright">
+            <div class="cartrightinside"></div>
+        </div>
 
+        <div>
+            <button class="cartorder">
+                <a href="Cart.html">Order Now</a>
+            </button>
+        </div>
+        <script type="application/javascript" src="js/index.js"></script>
+    </body>
 </html>

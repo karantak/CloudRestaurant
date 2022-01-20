@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLOUD RESTAURANT</title>
-    <link rel="stylesheet" href="Login.css">
-
-</head>
-
-<body>
-    <div id="logindiv" class="container-login">
-        <div class="login-box">
-            <div class="form-login">
-                <h1 class="headlogin">Login</h1>
-                <form action="">
-                    <input class="log-input" type="text" placeholder="Username">
-                    <input class="log-input" type="password" placeholder="Password">
-                    <input class="log-input" id="login-submit-button" onclick="document.location='Home.html'"
-                        type="button" value="Submit">
-                    <p class="para-login">
-                        Not signed-up yet? <a href="register.html">Register</a>
-                    </p>
-                </form>
-            </div>
-        </div>
-        <button id="btn-login" onclick="document.location='Home.html'">x</button>
-    </div>
-
-
-<!-- ........................JAVASCRIPT STARTS HERE ...........................-->
-
-    <script>
-        function hide() {
-            let btn = document.getElementById("btn-login");
-            let para = document.getElementById("logindiv");
-            if (logindiv.style.display != "none") {
-                logindiv.style.display = "none";
-            }
-            else {
-                logindiv.style.display = "block"
-            }
-        }
-
-    </script>
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CLOUD RESTAURANT</title>
+		<link rel="stylesheet" href="Login.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="logindiv" class="container-login">
+			<div class="login-box">
+				<div class="form-login">
+					<h1 class="headlogin">Login</h1>
+					<form action="">
+						<input
+							class="log-input"
+							type="text"
+							placeholder="Username"
+							id='name'
+						/>
+						<input
+							class="log-input"
+							type="password"
+							placeholder="Password"
+							id='password'
+						/>
+						<input
+							class="log-input"
+							id="login-submit-button"
+							onclick="login()"
+							type="button"
+							value="Submit"
+						/>
+						<p class="para-login">
+							Not signed-up yet?
+							<a href="register.html">Register</a>
+						</p>
+					</form>
+				</div>
+			</div>
+			<button id="btn-login" onclick="document.location='Home.html'">
+				x
+			</button>
+		</div>
+		<script type="application/javascript" src="js/index.js"></script>
+	</body>
 </html>
