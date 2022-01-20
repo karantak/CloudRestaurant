@@ -76,6 +76,5 @@ const logout = async () => {
 		method: 'DELETE',
 		credentials: 'include'
 	})
-	if(data.success) 
-		window.location.replace('/Home.html');
+	window.location.replace('/Home.html');
 }

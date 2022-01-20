@@ -43,18 +43,13 @@ const signup = async (req, res) => {
 };
 
 const login = async (req, res) => {
-	const { mobileNumber, email, password } = req.body;
-	if ((!mobileNumber && !email) || !password)
+	const { name, password } = req.body;
+	if (!name || !password)
 		return res.json({
 			success: false,
 			message: "Incomplete information provided",
 		});
-	const customer = await Customer.findOne({
-		$or: [
-			{ mobileNumber: mobileNumber || "N.A" },
-			{ email: email || "N.A" },
-		],
-	});
+	const customer = await Customer.findOne({name});
 	if (!customer)
 		return res.json({ success: false, message: "Customer does not exist" });
 	if (!(await comparePassword(password, customer.password)))
