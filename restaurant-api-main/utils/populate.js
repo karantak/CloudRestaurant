@@ -1,4 +1,4 @@
-const { FoodItem } = require("./schema/models");
+const { FoodItem } = require("../schema/models");
 
 const rawFoodItems = [
 	{ name: "Idli", type: "South", price: "35" },
