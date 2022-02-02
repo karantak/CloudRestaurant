@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CLOUD RESTAURANT</title>
-        <link rel="stylesheet" href="Register.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    </head>
-    <body>
-        <div id="containerregister" class="containerregister">
-            <div class="register-box">
-                <div class="form-register">
-                    <h1>REGISTER</h1>
-                    <form action="">
-                        <input
-                            class="reg-input"
-                            type="text"
-                            placeholder="Name"
-                            id='name'
-                        />
-                        <input
-                            class="reg-input"
-                            type="email"
-                            placeholder="Email"
-                            id='email'
-                        />
-                        <input
-                            class="reg-input"
-                            type="tel"
-                            placeholder="Mob No."
-                            id='mobileNumber'
-                        />
-                        <input
-                            class="reg-input"
-                            type="text"
-                            placeholder="Address"
-                            id='address'
-                        />
-                        <input
-                            class="reg-input"
-                            type="password"
-                            placeholder="Password"
-                            id='password'
-                        />
-                        <input
-                            class="reg-input"
-                            id="register-submit-button"
-                            onclick="register()"
-                            type="button"
-                            value="Submit"
-                        />
-                    </form>
-                </div>
-            </div>
-            <button id="btn-reg" onclick="document.location='Home.html'">
-                x
-            </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOUD RESTAURANT</title>
+    <link rel="stylesheet" href="Register.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="containerregister" class="containerregister">
+      <div class="register-box">
+        <div class="form-register">
+          <h1>REGISTER</h1>
+          <form action="">
+            <input class="reg-input" type="text" placeholder="Name" id="name" />
+            <input
+              class="reg-input"
+              type="email"
+              placeholder="Email"
+              id="email"
+            />
+            <input
+              class="reg-input"
+              type="tel"
+              placeholder="Mob No."
+              id="mobileNumber"
+            />
+            <input
+              class="reg-input"
+              type="text"
+              placeholder="Address"
+              id="address"
+            />
+            <input
+              class="reg-input"
+              type="password"
+              placeholder="Password"
+              id="password"
+            />
+            <input
+              class="reg-input"
+              id="register-submit-button"
+              onclick="register()"
+              type="button"
+              value="Submit"
+            />
+          </form>
         </div>
-        <script type="application/javascript" src="js/index.js"></script>
-    </body>
+      </div>
+      <button id="btn-reg" onclick="document.location='Home.html'">x</button>
+    </div>
+    <script type="application/javascript" src="js/index.js"></script>
+  </body>
 </html>

@@ -1,147 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CLOUD RESTAURANT</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="Home.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<style>
-			@media only screen and (max-width: 1326px) {
-				body {
-					width: max-content;
-				}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOUD RESTAURANT</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Home.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      @media only screen and (max-width: 1326px) {
+        body {
+          width: max-content;
+        }
 
-				.home-nav-right {
-					left: 30%;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<!--............................... HOME SECTION STARTS HERE .........................-->
+        .home-nav-right {
+          left: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--............................... HOME SECTION STARTS HERE .........................-->
 
-		<!--............................. Navbar section starts here .........................-->
+    <!--............................. Navbar section starts here .........................-->
 
-		<div>
-			<nav class="navbar">
-				<ul class="navul">
-					<img
-						class="Nav-logo"
-						src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
-					/>
+    <div>
+      <nav class="navbar">
+        <ul class="navul">
+          <img
+            class="Nav-logo"
+            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+          />
 
-					<li class="home-nav-left"><a href="">Home</a></li>
-					<li class="home-nav-left"><a href="Menu.html">Menu</a></li>
-					<li class="home-nav-left"><a href="Cart.html">Cart</a></li>
-					<li class="home-nav-left">
-						<a href="Contactus.html">Contact us</a>
-					</li>
-					<li class="home-nav-right notLoggedIn">
-						<a href="Login.html">Login</a>
-					</li>
-					<li class="home-nav-right notLoggedIn">
-						<a href="register.html">Signup</a>
-					</li>
-					<li class='home-nav-right loggedIn'>
-						<p id='username'></p>
-					</li>
-					<li class='home-nav-right loggedIn'>
-						<input type='button' onclick='logout()' value='Logout'/>
-					</li>
-				</ul>
-			</nav>
-		</div>
+          <li class="home-nav-left">
+            <a href="">Home</a>
+          </li>
+          <li class="home-nav-left">
+            <a href="Menu.html">Menu</a>
+          </li>
+          <li class="home-nav-left">
+            <a href="Cart.html">Cart</a>
+          </li>
+          <li class="home-nav-left">
+            <a href="Contactus.html">Contact us</a>
+          </li>
+          <li class="home-nav-right notLoggedIn">
+            <a href="Login.html">Login</a>
+          </li>
+          <li class="home-nav-right notLoggedIn">
+            <a href="register.html">Signup</a>
+          </li>
+          <li class="home-nav-right loggedIn">
+            <p id="username"></p>
+          </li>
+          <li class="home-nav-right loggedIn">
+            <input type="button" onclick="logout()" value="Logout" />
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-		<!--............................... Navbar section ends here ..............................-->
+    <!--............................... Navbar section ends here ..............................-->
 
-		<!--................................Slider section starts here ..............................-->
+    <!--................................Slider section starts here ..............................-->
 
-		<div class="Carousel">
-			<div class="img-slider">
-				<div class="slide active">
-					<img
-						src="https://images.freekaamaal.com/post_images/1606817930.jpg"
-						alt=""
-					/>
-					<div class="info">
-						<h2>CLOUD RESTAURANT</h2>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Debitis, cumque illum provident possimus nemo
-							tempora consequuntur in qui repudiandae voluptatem.
-						</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img
-						src="https://www.yourphnompenh.com/order/wp-content/uploads/2020/12/Cover_idly_dosa_indai_restuarnt_in_yourphnompenh_online_ordering.jpg"
-						alt=""
-					/>
-					<div class="info">
-						<h2>Slide 1</h2>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Debitis, cumque illum provident possimus nemo
-							tempora consequuntur in qui repudiandae voluptatem.
-						</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img
-						src="https://static.toiimg.com/photo/72023714.cms"
-						alt=""
-					/>
-					<div class="info">
-						<h2>Slide 1</h2>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Debitis, cumque illum provident possimus nemo
-							tempora consequuntur in qui repudiandae voluptatem.
-						</p>
-					</div>
-				</div>
-				<!--.................... ...........Slider section ends here.................................... -->
-				<!--............................ Slider button section ends here .......................-->
-				<div class="navigation">
-					<div class="btn"></div>
-					<div class="btn"></div>
-					<div class="btn"></div>
-				</div>
-			</div>
-		</div>
+    <div class="Carousel">
+      <div class="img-slider">
+        <div class="slide active">
+          <img
+            src="https://images.freekaamaal.com/post_images/1606817930.jpg"
+            alt=""
+          />
+          <div class="info">
+            <h2>CLOUD RESTAURANT</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis,
+              cumque illum provident possimus nemo tempora consequuntur in qui
+              repudiandae voluptatem.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://www.yourphnompenh.com/order/wp-content/uploads/2020
+            /12/Cover_idly_dosa_indai_restuarnt_in_yourphnompenh_online_ordering.jpg"
+            alt=""
+          />
+          <div class="info">
+            <h2>Slide 1</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis,
+              cumque illum provident possimus nemo tempora consequuntur in qui
+              repudiandae voluptatem.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://static.toiimg.com/photo/72023714.cms" alt="" />
+          <div class="info">
+            <h2>Slide 1</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis,
+              cumque illum provident possimus nemo tempora consequuntur in qui
+              repudiandae voluptatem.
+            </p>
+          </div>
+        </div>
+        <!--.................... ...........Slider section ends here.................................... -->
+        <!--............................ Slider button section ends here .......................-->
+        <div class="navigation">
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </div>
 
-		<!--............................. Button section starts here......................... -->
-		<div class="waytomenu">
-			<section class="waytomenusection">
-				<button
-					class="btnmenu stater"
-					onclick="document.location='Menu.html'"
-				>
-					Starter
-				</button>
-				<button
-					class="btnmenu north"
-					onclick="document.location='Menu.html'"
-				>
-					North
-				</button>
-				<button
-					class="btnmenu south"
-					onclick="document.location='Menu.html'"
-				>
-					South
-				</button>
-			</section>
-		</div>
+    <!--............................. Button section starts here......................... -->
+    <div class="waytomenu">
+      <section class="waytomenusection">
+        <button class="btnmenu stater" onclick="document.location='Menu.html'">
+          Starter
+        </button>
+        <button class="btnmenu north" onclick="document.location='Menu.html'">
+          North
+        </button>
+        <button class="btnmenu south" onclick="document.location='Menu.html'">
+          South
+        </button>
+      </section>
+    </div>
 
-		<!--............................. Button section ends here ...........................-->
-		<script type="application/javascript" src="js/index.js"></script>
-		<script type="application/javascript" src="js/home.js"></script>
-	</body>
+    <!--............................. Button section ends here ...........................-->
+    <script type="application/javascript" src="js/index.js"></script>
+    <script type="application/javascript" src="js/home.js"></script>
+  </body>
 </html>
