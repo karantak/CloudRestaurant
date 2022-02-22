@@ -1,67 +1,57 @@
- /* CSS RESET*/ 
- * {
-    box-sizing: border-box;
+/* CSS RESET*/
+* {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
-.container-login {
-    position: absolute;
-    margin: 0px 0px;
-    height: 730px;
-    width: 100%;
-    background-color: transparent;
-    background-size: 100% 100%;
+.login-box .para-login a {
+  text-decoration: none;
+  color: purple;
 }
 
 .login-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 12%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
 }
 
 .form-login {
-    background-color: white;
-    width: 450px;
-    display: flex;
-    padding: 30px 10px;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;
+  background-color: white;
+  width: 450px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 30px 10px;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .log-input {
-    padding: 15px;
-    width: 70%;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 15px;
+  padding: 15px;
+  width: 70%;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 #login-submit-button {
-    padding: 8px 0px;
-    background-color: tomato;
-    font-size: 20px;
-    color: white;
+  padding: 8px 0px;
+  background-color: tomato;
+  font-size: 20px;
+  color: white;
 }
 
 #login-submit-button:hover {
-    background-color: rgb(167, 65, 47);
-    font-size: 23px;
+  background-color: rgb(167, 65, 47);
+  font-size: 23px;
 }
 
-#login-submit-button:hover {
-    background-color: rgb(167, 65, 47);
-    font-size: 23px;
-}
-
-
-
-#btn-login {
+/* #btn-login {
     position: absolute;
     top: 210px;
     left: 930px;
@@ -69,6 +59,4 @@ body {
     border: none;
     font-size: 20px;
     font-weight: 400px;
-}
-
-
+} */

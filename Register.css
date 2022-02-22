@@ -1,65 +1,70 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 .container-register {
-    position: absolute;
-    z-index: 4;
-    margin: 0px 0px;
-    height: 730px;
-    width: 100%;
-    background-color: transparent;
-    background-size: 100% 100%;
+  margin: 0px 0px;
+  height: max-content;
+  width: 100%;
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+
+.container-register .para-login a {
+  text-decoration: none;
+  color: purple;
+  font-family: "Poppins", sans-serif;
 }
 
 .register-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
 }
 
 .form-register {
-    background-color: white;
-    width: 450px;
-    display: flex;
-    padding: 30px 10px;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;
+  background-color: white;
+  width: 450px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 30px 10px;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .reg-input {
-    padding: 15px;
-    width: 70%;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 15px;
+  padding: 15px;
+  width: 70%;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 #register-submit-button {
-    padding: 8px 0px;
-    background-color: tomato;
-    font-size: 20px;
-    color: white;
+  padding: 8px 0px;
+  background-color: tomato;
+  font-size: 20px;
+  color: white;
 }
 
 #register-submit-button:hover {
-    background-color: rgb(167, 65, 47);
-    font-size: 23px;
+  background-color: rgb(167, 65, 47);
+  font-size: 23px;
 }
 
 #btn-reg {
-    position: absolute;
-    top: 105px;
-    left: 930px;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    font-weight: 400px;
+  position: absolute;
+  top: 105px;
+  left: 930px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: 400px;
 }
