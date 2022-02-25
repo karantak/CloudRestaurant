@@ -28,16 +28,10 @@ const rawFoodItems = [
 ];
 
 const populate = async () => {
-	const foodItems = await FoodItem.find({});
-	if (!foodItems.length) {
+	if (!await FoodItem.count()) {
 		console.log('Populating the database...');
 		rawFoodItems.forEach(async ({ name, type, price }) => {
-			const foodItem = new FoodItem({
-				name,
-				type,
-				price,
-			});
-			await foodItem.save();
+			const foodItem = await FoodItem.create({name, type, price});
 		});
 		console.log('Populated the database')
 	}

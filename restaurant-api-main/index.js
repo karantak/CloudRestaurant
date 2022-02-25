@@ -3,7 +3,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const { verifyAccessToken } = require("./utils/auth");
@@ -22,6 +21,7 @@ const {
 	removeFromCart,
 } = require("./controller/mainController");
 const populate = require('./utils/populate');
+const {initDb} = require('./schema/models');
 
 /* app configurations */
 
@@ -41,21 +41,14 @@ app.use(
 	})
 );
 
-/* mongodb database connection */
+/* mysql database connection */
 
-console.log(process.env.MONGO_URI);
-const MONGO_URI = process.env.MONGO_URI;
-mongoose.connect(MONGO_URI, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
-mongoose.connection.on("error", () => {
-	console.log("Error connecting to database");
-});
-mongoose.connection.on("open", () => {
-	console.log("Connected to database");
+const connectToDatabase = async () => {
+	await initDb();
 	populate();
-});
+}
+
+connectToDatabase();
 
 /* api */
 

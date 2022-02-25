@@ -22,7 +22,7 @@ const comparePassword = async (password, hashedPassword) => {
 const getAccountId = async (accessToken) => {
 	try {
 		const customer = jwt.verify(accessToken, ACCESS_TOKEN_SECRET);
-		return customer._id;
+		return customer.id;
 	} catch {
 		return false;
 	}
@@ -31,7 +31,7 @@ const getAccountId = async (accessToken) => {
 const generateAccessToken = (customer) => {
 	return jwt.sign(
 		{
-			_id: customer._id,
+			id: customer.id,
 			email: customer.email,
 			name: customer.name,
 			mobileNumber: customer.mobileNumber,
@@ -42,14 +42,14 @@ const generateAccessToken = (customer) => {
 };
 
 const verifyAccessToken = async (req, res, next) => {
-	const { _id } = req.params;
+	const { id } = req.params;
 	const { accessToken } = req.cookies;
 	if (!accessToken)
 		return res
 			.status(401)
 			.json({ success: false, body: { error: "No access token" } });
 	jwt.verify(accessToken, ACCESS_TOKEN_SECRET, async (err, customer) => {
-		if (err || (_id && _id !== customer._id))
+		if (err || (id && id !== customer.id))
 			return res.status(401).json({
 				success: false,
 				body: { error: "Invalid access token" },

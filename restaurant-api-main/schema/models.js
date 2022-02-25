@@ -1,43 +1,182 @@
-const { Schema, model } = require("mongoose");
+const {Sequelize, Model, DataTypes} = require('sequelize');
 
-const customerSchema = new Schema({
-	name: String,
-	email: String,
-	password: String,
-	mobileNumber: Number,
-	address: String,
+const sequelize = new Sequelize('Cloudrestaurant', 'root', 'Yash@welcome1', {
+	dialect: 'mysql',
+})
+
+const Customer = sequelize.define('Customer', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	name: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	email: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	password: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	mobileNumber: {
+		type: DataTypes.INTEGER,
+		allowNull: false
+	},
+	address: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	isAdmin: {
+		type: DataTypes.BOOLEAN,
+		defaultValue: false
+	}
 });
 
-const foodItemSchema = new Schema({
-	type: String,
-	name: String,
-	price: Number,
+const FoodItem = sequelize.define('FoodItem', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	type: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	name: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	price: {
+		type: DataTypes.INTEGER,
+		allowNull: false
+	},
 });
 
-const cartSchema = new Schema({
-	foodItems: [{foodItemId: {type: Schema.Types.ObjectId, ref: 'FoodItem'}, quantity: Number}],
-	customerId: {type: Schema.Types.ObjectId, ref: 'Customer'},
-	locked: Boolean,
+const Cart = sequelize.define('Cart', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	customerId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: Customer,
+			key: 'id',
+		},
+	},
+	locked: {
+		type: DataTypes.BOOLEAN,
+		allowNull: false
+	},
 });
 
-const orderSchema = new Schema({
-	deliveryAddress: String,
-	paymentDone: Boolean,
-	totalPrice: Number,
-	cartId: {type: Schema.Types.ObjectId, ref: 'Cart'},
-	customerId: {type: Schema.Types.ObjectId, ref: 'Customer'},
+const CartFoodItem = sequelize.define('CartFoodItem', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	cartId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: Cart,
+			key: 'id',
+		},
+	},
+	foodItemId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: FoodItem,
+			key: 'id',
+		},
+	},
 });
 
-const paymentSchema = new Schema({
-	type: String,
-	status: String,
-	orderId: { type: Schema.Types.ObjectId, ref: "Order" },
+const Order = sequelize.define('Order', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	deliveryAddress: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	paymentDone: {
+		type: DataTypes.BOOLEAN,
+		allowNull: false
+	},
+	totalPrice: {
+		type: DataTypes.INTEGER,
+		allowNull: false
+	},
+	cartId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: Cart,
+			key: 'id',
+		},
+	},
+	customerId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: Customer,
+			key: 'id',
+		},
+	},
 });
+
+const Payment = sequelize.define('Payment', {
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	deliveryAddress: {
+		type: DataTypes.STRING,
+		allowNull: false
+	},
+	paymentDone: {
+		type: DataTypes.BOOLEAN,
+		allowNull: false
+	},
+	orderId: {
+		type: DataTypes.INTEGER,
+		allowNull: false,
+		references: {
+			model: Order,
+			key: 'id',
+		},
+	},
+});
+
+const initDb = async () => {
+	await sequelize.sync()
+}
 
 module.exports = {
-	Customer: model("Customer", customerSchema),
-	FoodItem: model("FoodItem", foodItemSchema),
-	Order: model("Order", orderSchema),
-	Cart: model("Cart", cartSchema),
-	Payment: model("Payment", paymentSchema),
+	Customer,
+	Order,
+	FoodItem,
+	Cart,
+	CartFoodItem,
+	Payment,
+	initDb
 };
+
+/*
+Discord Bot Requirements
+1. Monitor Phishing & Scam links
+2. Role giving feature with logs
+3. Sales and listing of the NFT marketplace
+*/

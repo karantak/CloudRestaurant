@@ -74,7 +74,7 @@ const login = async () => {
 
 // deletes the cookie and logs user out
 const logout = async () => {
-	const response = await fetch('http://localhost:5500/logout', {
+	const response = await fetch('http://localhost:5000/logout', {
 		method: 'DELETE',
 		credentials: 'include'
 	})

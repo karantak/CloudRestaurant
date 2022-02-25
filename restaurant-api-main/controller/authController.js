@@ -4,6 +4,7 @@ const {
 	comparePassword,
 	generateAccessToken,
 } = require("../utils/auth");
+const {Op} = require('sequelize');
 
 const signup = async (req, res) => {
 	const { name, password, mobileNumber, email, address } = req.body;
@@ -13,10 +14,12 @@ const signup = async (req, res) => {
 			message: "Incomplete information provided",
 		});
 	const existingCustomer = await Customer.findOne({
-		$or: [
-			{ mobileNumber: mobileNumber || "X" },
-			{ email: email || "X" },
-		],
+		where: {
+			[Op.or]: [
+				{ mobileNumber: mobileNumber || "X" },
+				{ email: email || "X" }
+			]
+		}
 	});
 	if (existingCustomer)
 		return res.json({
@@ -25,14 +28,13 @@ const signup = async (req, res) => {
 				"Customer with provided email or mobile number already exists",
 		});
 	const hashedPassword = await hashPassword(password);
-	let customer = new Customer({
+	const customer = await Customer.create({
 		name,
 		password: hashedPassword,
 		mobileNumber: mobileNumber || "",
 		email: email || "",
 		address,
 	});
-	customer = await customer.save();
 	const accessToken = generateAccessToken(customer);
 	res.cookie("accessToken", accessToken, { secure: true, sameSite: "None" });
 	res.json({
@@ -49,7 +51,7 @@ const login = async (req, res) => {
 			success: false,
 			message: "Incomplete information provided",
 		});
-	const customer = await Customer.findOne({name});
+	const customer = await Customer.findOne({where: {name}});
 	if (!customer)
 		return res.json({ success: false, message: "Customer does not exist" });
 	if (!(await comparePassword(password, customer.password)))
@@ -64,7 +66,7 @@ const login = async (req, res) => {
 };
 
 const refresh = async (req, res) => {
-	const customer = await Customer.findById(req.customer._id);
+	const customer = await Customer.findOne({where: {id: req.customer.id}});
 	res.json({
 		success: true,
 		message: "Token was verified",
