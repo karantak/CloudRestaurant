@@ -90,10 +90,6 @@ const Order = sequelize.define('order', {
 		type: DataTypes.STRING,
 		allowNull: false
 	},
-	paymentDone: {
-		type: DataTypes.BOOLEAN,
-		allowNull: false
-	},
 	totalPrice: {
 		type: DataTypes.INTEGER,
 		allowNull: false
@@ -106,28 +102,24 @@ const Payment = sequelize.define('payment', {
 		primaryKey: true,
 		autoIncrement: true,
 	},
-	deliveryAddress: {
+	transactionId: {
 		type: DataTypes.STRING,
-		allowNull: false
-	},
-	paymentDone: {
-		type: DataTypes.BOOLEAN,
 		allowNull: false
 	},
 });
 
-Order.belongsTo(Customer);
 Customer.hasMany(Order);
 Customer.hasMany(Cart);
-Order.belongsTo(Cart);
-Order.hasMany(Payment);
-Payment.belongsTo(Order);
+FoodItem.hasMany(CartFoodItem);
 Cart.hasMany(CartFoodItem);
 Cart.hasMany(Order);
 Cart.belongsTo(Customer);
 CartFoodItem.belongsTo(Cart);
 CartFoodItem.belongsTo(FoodItem);
-FoodItem.hasMany(CartFoodItem);
+Order.belongsTo(Customer);
+Order.belongsTo(Cart);
+Order.hasMany(Payment);
+Payment.belongsTo(Order);
 
 const initDb = async () => {
 	await sequelize.sync();

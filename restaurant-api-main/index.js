@@ -20,6 +20,7 @@ const {
 	addToCart,
 	removeFromCart,
 	getAllOrders,
+	removeOrder,
 } = require("./controller/mainController");
 const populate = require('./utils/populate');
 const {initDb} = require('./schema/models');
@@ -66,6 +67,7 @@ app.get("/get-all-orders", verifyAccessToken, getAllOrders);
 app.get("/get-orders", verifyAccessToken, getOrders);
 app.get("/get-food-menu", getFoodMenu);
 app.get("/get-cart", verifyAccessToken, getCart);
+app.get("/remove-order/:orderId", verifyAccessToken, removeOrder);
 
 /* making the app listen to a port */
 

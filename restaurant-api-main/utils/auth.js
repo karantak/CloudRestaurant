@@ -36,6 +36,7 @@ const generateAccessToken = (customer) => {
 			name: customer.name,
 			mobileNumber: customer.mobileNumber,
 			address: customer.address,
+			isAdmin: customer.isAdmin,
 		},
 		ACCESS_TOKEN_SECRET
 	);

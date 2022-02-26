@@ -5,6 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="Admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+        <ul class="navul">
+          <img
+            class="Nav-logo"
+            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+          />
+          <li class="home-nav-left"><a href="index.html">Home</a></li>
+          <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
+          <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
+          <li class="home-nav-left"><a href="#">Contact us</a></li>
+          <li class="home-nav-right notLoggedIn">
+            <a href="Login.html">Login</a>
+          </li>
+          <li class="home-nav-right notLoggedIn">
+            <a href="register.html">Signup</a>
+          </li>
+          <li class="home-nav-right loggedIn">
+            <p id="username"></p>
+          </li>
+          <li class="home-nav-right loggedIn">
+            <input
+              type="button"
+              onclick="logout()"
+              value="Logout"
+            />
+          </li>
+        </ul>
+      </nav>
+      <div class='admin'>
+        <h1>All Orders</h1>
+        <table id='orders-table'>
+        </table>
+      </div>
+  </body>
+  <script type="application/javascript" src="js/index.js"></script>
+  <script type="application/javascript" src="js/admin.js"></script>
 </html>

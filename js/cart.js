@@ -35,6 +35,25 @@ const removeFromCart = async (id) => {
 		return window.location.replace('/Cart.html');
 }
 
+const placeOrder = async () => {
+	const deliveryAddress = $('#deliveryAddress').val();
+	const response = await fetch('http://localhost:5000/place-order', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		credentials: 'include',
+		body: JSON.stringify({deliveryAddress: deliveryAddress || ''})
+	});
+	const data = await response.json();
+	if(data.success) {
+		alert('Order placed');
+		return window.location.replace('/');
+	}
+	else 
+		alert(data.message);
+};
+
 $(document).ready(async () => {
 	const response = await fetch('http://localhost:5000/get-cart', {
 		credentials: 'include'
