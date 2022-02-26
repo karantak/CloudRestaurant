@@ -1,44 +1,40 @@
-const {Cart, Order, FoodItem} = require('../schema/models');
+const {Cart, Order, FoodItem, CartFoodItem} = require('../schema/models');
 
 const addToCart = async (req, res) => {
 	const {foodItemId, quantity} = req.body;
-	if(!foodItemId || !quantity) 
+	if(!foodItemId || !quantity || isNaN(quantity) || quantity < 1) 
 		return res.json({success: false, message: 'Incomplete information provided'});
-	let cart = await Cart.findOne({customerId: req.customer._id, locked: false});
+	let cart = await Cart.findOne({where: {customerId: req.customer.id, locked: false}});
 	if(!cart) {
-		cart = new Cart({locked: false, customerId: req.customer._id, foodItems: []});
-		cart.foodItems.push({foodItemId, quantity});
+		cart = await Cart.create({locked: false, customerId: req.customer.id});
+		const cartItem = await CartFoodItem.create({quantity, foodItemId, cartId: cart.id});
 	}
 	else {
-		let updated = false;
-		for(let i = 0; i < cart.foodItems.length; ++i) {
-			if(cart.foodItems[i].foodItemId === foodItemId) {
-				cart.foodItems[i].quantity += quantity;
-				updated = true;
-			}
-		}
-		if(!updated) 
-			cart.foodItems.push({foodItemId, quantity});
+		const cartItem = await CartFoodItem.findOne({where: {cartId: cart.id, foodItemId}});
+		if(cartItem) 
+			await CartFoodItem.update({quantity: cartItem.quantity + quantity}, {where: {cartId: cart.id, foodItemId}});
+		else 
+			await CartFoodItem.create({quantity, foodItemId, cartId: cart.id});
 	}
 	cart = await cart.save();
-	return res.json({success: true, message: 'Food item added to cart', body: {cart}});
+	return res.json({success: true, message: 'Food item added to cart'});
 }
 
 const removeFromCart = async (req, res) => {
-	const {foodItemId} = req.body;
-	if(!foodItemId) 
+	const {cartItemId} = req.body;
+	if(!cartItemId) 
 		return res.json({success: false, message: 'Incomplete information provided'});
-	let cart = await Cart.findOne({customerId: req.customer._id});
-	if(!cart) 
-		res.json({success: false, message: 'Cart empty'});
-	cart.foodItems = cart.foodItems.filter(cartItem => cartItem.foodItemId !== foodItemId);
-	cart = await cart.save();
-	return res.json({success: true, message: 'Food item removed from cart', body: {cart}});
+	await CartFoodItem.destroy({where: {id: cartItemId}});
+	return res.json({success: true, message: 'Food item removed from cart'});
 }
 
 const getCart = async (req, res) => {
-	const cart = await Cart.findOne({customerId: req.customer._id});
-	return res.json({success: true, body: {cart}});
+	const cart = await Cart.findOne({where: {customerId: req.customer.id, locked: false}});
+	if(cart) {
+		const cartItems = await CartFoodItem.findAll({where: {cartId: cart.id}, include: [{model: Cart}, {model: FoodItem}]});
+		return res.json({success: true, body: {cartItems}});
+	} 
+	return res.json({success: false});
 }
 
 const placeOrder = async (req, res) => {
@@ -63,17 +59,22 @@ const placeOrder = async (req, res) => {
 	order = await order.save();
 	cart.locked = true;
 	await cart.save();
-	return res.json({success: true, message: 'Order placed', body: {order}});
+	return res.json({success: true, message: 'Order placed'});
 }
 
+const getAllOrders = async (req, res) => {
+	const orders = await Order.findAll();
+	return res.json({success: true, body: {orders}});
+};
+
 const getOrders = async (req, res) => {
-	const orders = await Order.find({customerId: req.customer._id});
+	const orders = await Order.findAll({where: {customerId: req.customer.id}});
 	return res.json({success: true, body: {orders}})
 }
 
 const getFoodMenu = async (req, res) => {
-	const foodMenu = await FoodItem.find({});
-	return res.json({success: true, body: {foodMenu }})
+	const foodMenu = await FoodItem.findAll();
+	return res.json({success: true, body: {foodMenu}})
 }
 
-module.exports = {addToCart, removeFromCart, placeOrder, getOrders, getFoodMenu, getCart};
+module.exports = {addToCart, removeFromCart, placeOrder, getOrders, getFoodMenu, getCart, getAllOrders};

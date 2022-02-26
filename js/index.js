@@ -1,4 +1,4 @@
-let customer = {}, isLoggedIn = false;
+var customer = {}, isLoggedIn = false;
 
 // added a jquery plugin to every file, check in the head tag
 
@@ -44,7 +44,7 @@ const register = async () => {
 		const data = await response.json();
 		if(!data.success) // if request is unsuccessful show the error message as alert
 			return alert(data.message); // we can do something better here but we are in a rush :(
-		window.location.replace('/Home.html');
+		window.location.replace('/index.html');
 	}
 	else 
 		alert('Fill all the fields');
@@ -65,7 +65,7 @@ const login = async () => {
 		const data = await response.json();
 		if(!data.success) 
 			return alert(data.message);
-		window.location.replace('/Home.html');
+		window.location.replace('/index.html');
 		
 	}
 	else 
@@ -80,6 +80,6 @@ const logout = async () => {
 	})
 	console.log(response)
 	customer= null
-	window.location.replace('/Home.html');
+	window.location.replace('/index.html');
 }
 

@@ -19,6 +19,7 @@ const {
 	getCart,
 	addToCart,
 	removeFromCart,
+	getAllOrders,
 } = require("./controller/mainController");
 const populate = require('./utils/populate');
 const {initDb} = require('./schema/models');
@@ -61,6 +62,7 @@ app.delete("/logout", verifyAccessToken, logout);
 app.post("/add-to-cart", verifyAccessToken, addToCart);
 app.post("/remove-from-cart", verifyAccessToken, removeFromCart);
 app.post("/place-order", verifyAccessToken, placeOrder);
+app.get("/get-all-orders", verifyAccessToken, getAllOrders);
 app.get("/get-orders", verifyAccessToken, getOrders);
 app.get("/get-food-menu", getFoodMenu);
 app.get("/get-cart", verifyAccessToken, getCart);

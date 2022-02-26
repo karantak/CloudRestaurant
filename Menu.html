@@ -1,246 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="Menu.css" />
-    <link rel="stylesheet" href="Home.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link
+	  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+	  rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="Menu.css" />
+	<link rel="stylesheet" href="Home.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
 
   <body>
-    <!-- .......................NAVBAR STARTS HERE........................-->
-    <div>
-      <nav class="navbar">
-        <ul class="navul">
-          <img
-            class="Nav-logo"
-            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
-          />
-          <li class="home-nav-left">
-            <a href="Home.html">Home</a>
-          </li>
+	<!-- .......................NAVBAR STARTS HERE........................-->
+	<div>
+	  <nav class="navbar">
+		<ul class="navul">
+		  <img
+			class="Nav-logo"
+			src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+		  />
+		  <li class="home-nav-left">
+			<a href="index.html">Home</a>
+		  </li>
 
-          <li class="home-nav-left">
-            <a href="#">Menu</a>
-          </li>
+		  <li class="home-nav-left">
+			<a href="#">Menu</a>
+		  </li>
 
-          <li class="home-nav-left">
-            <a href="Cart.html">Cart</a>
-          </li>
+		  <li class="home-nav-left">
+			<a href="Cart.html">Cart</a>
+		  </li>
 
-          <li class="home-nav-left">
-            <a href="Contactus.html">Contact us</a>
-          </li>
+		  <li class="home-nav-left">
+			<a href="Contactus.html">Contact us</a>
+		  </li>
 
-          <li class="home-nav-right notLoggedIn">
-            <a href="Login.html">Login</a>
-          </li>
+		  <li class="home-nav-right notLoggedIn">
+			<a href="Login.html">Login</a>
+		  </li>
 
-          <li class="home-nav-right notLoggedIn">
-            <a href="register.html">Signup</a>
-          </li>
+		  <li class="home-nav-right notLoggedIn">
+			<a href="register.html">Signup</a>
+		  </li>
 
-          <li class="home-nav-right loggedIn">
-            <p id="username"></p>
-          </li>
+		  <li class="home-nav-right loggedIn">
+			<p id="username"></p>
+		  </li>
 
-          <li class="home-nav-right loggedIn">
-            <input type="button" onclick="logout()" value="Logout" />
-          </li>
-        </ul>
-      </nav>
-    </div>
+		  <li class="home-nav-right loggedIn">
+			<input type="button" onclick="logout()" value="Logout" />
+		  </li>
+		</ul>
+	  </nav>
+	</div>
 
-    <!-- .......................NAVBAR ENDS HERE........................-->
+	<!-- .......................NAVBAR ENDS HERE........................-->
 
-    <!-- .......................STARTER MENU STARTS HERE........................-->
+	<!-- .......................STARTER MENU STARTS HERE........................-->
 
-    <div class="bookfile">
-      <div class="menustarter">
-        <h1 class="bookhead">Starter</h1>
-        <div class="menuadditem">
-          <li class="menuli">Tea</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Coffee</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Poha</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Upma</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Veg crispy</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Fries</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Cutlet</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Onion Pakoda</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-      </div>
-    </div>
-    <!-- .......................STARTER MENU ENDS HERE........................-->
+	<div class="bookfile">
+	  <div class="menustarter" id='starter'>
+		<h1 class="bookhead">Starter</h1>
+	  </div>
+	</div>
+	<!-- .......................STARTER MENU ENDS HERE........................-->
 
-    <!-- .......................NORTH MENU STARTS HERE........................-->
+	<!-- .......................NORTH MENU STARTS HERE........................-->
 
-    <div class="bookfile">
-      <div class="menunorth">
-        <h1 class="bookhead">North</h1>
-        <div class="menuadditem">
-          <li class="menuli">Paneer Masala</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Palak Paneer</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Kulcha</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Naan</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Sarso Saag</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Makka Roti</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">North Special</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">North Thali</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-      </div>
-    </div>
+	<div class="bookfile">
+	  <div class="menunorth" id='north'>
+		<h1 class="bookhead">North</h1>
+	  </div>
+	</div>
 
-    <!-- .......................STARTER MENU ENDS HERE........................-->
+	<!-- .......................STARTER MENU ENDS HERE........................-->
 
-    <!-- .......................SOUTH MENU STARTS HERE........................-->
+	<!-- .......................SOUTH MENU STARTS HERE........................-->
 
-    <div class="bookfile">
-      <div class="menusouth">
-        <h1 class="bookhead">South</h1>
-        <div class="menuadditem">
-          <li class="menuli">Idli</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" id="quantitybox" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Dosa</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Masala dosa</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Biryani</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Paal Payasam</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Gawti Chicken</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">Pongal</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-        <div class="menuadditem">
-          <li class="menuli">South Thali</li>
-          <li class="menuliprice">10</li>
-          <input class="menuinputli" type="number" />
-          <button class="menubtnli">ADD</button>
-        </div>
-      </div>
-    </div>
+	<div class="bookfile">
+	  <div class="menusouth" id='south'>
+		<h1 class="bookhead">South</h1>
+	  </div>
+	</div>
 
-    <!-- .......................SOUTH MENU ENDS HERE........................-->
+	<!-- .......................SOUTH MENU ENDS HERE........................-->
 
-    <!-- .......................PROCEED BUTTON STARTS HERE........................-->
-    <div>
-      <button class="menuproceed">
-        <a href="Cart.html">Proceed</a>
-      </button>
-    </div>
-    <!-- .......................PROCEED BUTTON ENDS HERE........................-->
+	<!-- .......................PROCEED BUTTON STARTS HERE........................-->
+	<div>
+	  <button class="menuproceed">
+		<a href="Cart.html">Proceed</a>
+	  </button>
+	</div>
+	<!-- .......................PROCEED BUTTON ENDS HERE........................-->
 
-    <script type="application/javascript" src="js/index.js"></script>
+	<script type="application/javascript" src="js/index.js"></script>
+	<script type="application/javascript" src="js/menu.js"></script>
   </body>
 </html>

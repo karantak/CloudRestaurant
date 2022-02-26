@@ -23,7 +23,7 @@
             class="Nav-logo"
             src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
           />
-          <li class="home-nav-left"><a href="Home.html">Home</a></li>
+          <li class="home-nav-left"><a href="index.html">Home</a></li>
           <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
           <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
           <li class="home-nav-left">
@@ -64,13 +64,6 @@
           type="text"
           placeholder="Address"
         />
-        <h2 class="cartinside">New Address</h2>
-        <input
-          class="cartinside"
-          id="cartnewadd"
-          type="text"
-          placeholder="New Address"
-        />
       </div>
     </div>
     <!-- ..............................LEFT SECTION ENDS HERE............................. -->
@@ -81,7 +74,8 @@
 
     <!-- ..........................................RIGHT SECTION STARTS HERE.................... -->
     <div class="cartright">
-      <div class="cartrightinside"></div>
+      <div class="cartrightinside" id='cart-items'>
+      </div>
     </div>
 
     <div>
@@ -90,5 +84,6 @@
       </button>
     </div>
     <script type="application/javascript" src="js/index.js"></script>
+    <script type="application/javascript" src="js/cart.js"></script>
   </body>
 </html>

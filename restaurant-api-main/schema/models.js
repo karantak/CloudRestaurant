@@ -4,7 +4,7 @@ const sequelize = new Sequelize('Cloudrestaurant', 'root', 'Yash@welcome1', {
 	dialect: 'mysql',
 })
 
-const Customer = sequelize.define('Customer', {
+const Customer = sequelize.define('customer', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
@@ -23,7 +23,7 @@ const Customer = sequelize.define('Customer', {
 		allowNull: false
 	},
 	mobileNumber: {
-		type: DataTypes.INTEGER,
+		type: DataTypes.STRING,
 		allowNull: false
 	},
 	address: {
@@ -36,7 +36,7 @@ const Customer = sequelize.define('Customer', {
 	}
 });
 
-const FoodItem = sequelize.define('FoodItem', {
+const FoodItem = sequelize.define('foodItem', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
@@ -56,19 +56,11 @@ const FoodItem = sequelize.define('FoodItem', {
 	},
 });
 
-const Cart = sequelize.define('Cart', {
+const Cart = sequelize.define('cart', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
 		autoIncrement: true,
-	},
-	customerId: {
-		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: Customer,
-			key: 'id',
-		},
 	},
 	locked: {
 		type: DataTypes.BOOLEAN,
@@ -76,31 +68,19 @@ const Cart = sequelize.define('Cart', {
 	},
 });
 
-const CartFoodItem = sequelize.define('CartFoodItem', {
+const CartFoodItem = sequelize.define('cartFoodItem', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
 		autoIncrement: true,
 	},
-	cartId: {
+	quantity: {
 		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: Cart,
-			key: 'id',
-		},
-	},
-	foodItemId: {
-		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: FoodItem,
-			key: 'id',
-		},
+		allowNull: false
 	},
 });
 
-const Order = sequelize.define('Order', {
+const Order = sequelize.define('order', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
@@ -118,25 +98,9 @@ const Order = sequelize.define('Order', {
 		type: DataTypes.INTEGER,
 		allowNull: false
 	},
-	cartId: {
-		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: Cart,
-			key: 'id',
-		},
-	},
-	customerId: {
-		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: Customer,
-			key: 'id',
-		},
-	},
 });
 
-const Payment = sequelize.define('Payment', {
+const Payment = sequelize.define('payment', {
 	id: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
@@ -150,18 +114,23 @@ const Payment = sequelize.define('Payment', {
 		type: DataTypes.BOOLEAN,
 		allowNull: false
 	},
-	orderId: {
-		type: DataTypes.INTEGER,
-		allowNull: false,
-		references: {
-			model: Order,
-			key: 'id',
-		},
-	},
 });
 
+Order.belongsTo(Customer);
+Customer.hasMany(Order);
+Customer.hasMany(Cart);
+Order.belongsTo(Cart);
+Order.hasMany(Payment);
+Payment.belongsTo(Order);
+Cart.hasMany(CartFoodItem);
+Cart.hasMany(Order);
+Cart.belongsTo(Customer);
+CartFoodItem.belongsTo(Cart);
+CartFoodItem.belongsTo(FoodItem);
+FoodItem.hasMany(CartFoodItem);
+
 const initDb = async () => {
-	await sequelize.sync()
+	await sequelize.sync();
 }
 
 module.exports = {

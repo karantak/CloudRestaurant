@@ -1,4 +1,4 @@
-// moved js from Home.html to this file
+// moved js from index.html to this file
 
 const slides = document.querySelectorAll(".slide");
 const btns = document.querySelectorAll(".btn");
