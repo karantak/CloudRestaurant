@@ -81,8 +81,11 @@ const logout = async () => {
 	const response = await fetch('http://localhost:5000/logout', {
 		method: 'DELETE',
 		credentials: 'include'
-	})
-	console.log(response)
-	customer= null
-	window.location.replace('/i');
+	});
+	const data = await response.json();
+	if(data.success) {
+		customer= null;
+		isLoggedIn = false;
+		window.location.replace('/');
+	}
 }

@@ -66,8 +66,8 @@ const orderSession = async (req, res) => {
 					quantity: item.quantity
 				};
 			}),
-			success_url: 'http://localhost:3000/Success.html',
-			cancel_url: 'http://localhost:3000/Cart.html',
+			success_url: 'http://localhost:3000/html/Success.html',
+			cancel_url: 'http://localhost:3000/html/Cart.html',
 
 		});
 		const paymentIntent = await stripe.paymentIntents.retrieve(session.payment_intent);
