@@ -1,0 +1,55 @@
+.admin {
+	margin: 5rem auto;
+}
+.admin h1, .admin h2, #orders-table > p {
+	text-align: center;
+}
+.table-container {
+	width: 95vw;
+	overflow: auto;
+	min-height: auto;
+	max-height: 600px;
+	margin: 1rem auto;
+}
+#orders-table {
+	width: 100%;
+}
+.table-heading {
+	text-align: left;
+	background: tomato;
+	color: white;
+}
+.table-heading th {
+	padding: 1rem;
+}
+.table-row {
+	box-shadow: 0px 0px 2px black;
+}
+.table-row td {
+	padding: 1rem;
+}
+.table-items {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+	width: 150px;
+}
+.table-items li {
+	text-align: left;
+	background: black;
+	color: white;
+	padding: 0.5rem;
+	margin-bottom: 0.25rem;
+}
+#orders-table button {
+    background: tomato;
+    color: white;
+    border:  0px;
+    padding: 0.5rem;
+    transition: 0.3s all;
+}
+#orders-table button:hover {
+    background-color: rgb(167, 65, 47);
+    transform: scale(1.1);
+}

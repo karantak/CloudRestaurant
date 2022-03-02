@@ -96,18 +96,6 @@ const Order = sequelize.define('order', {
 	},
 });
 
-const Payment = sequelize.define('payment', {
-	id: {
-		type: DataTypes.INTEGER,
-		primaryKey: true,
-		autoIncrement: true,
-	},
-	transactionId: {
-		type: DataTypes.STRING,
-		allowNull: false
-	},
-});
-
 Customer.hasMany(Order);
 Customer.hasMany(Cart);
 FoodItem.hasMany(CartFoodItem);
@@ -118,8 +106,6 @@ CartFoodItem.belongsTo(Cart);
 CartFoodItem.belongsTo(FoodItem);
 Order.belongsTo(Customer);
 Order.belongsTo(Cart);
-Order.hasMany(Payment);
-Payment.belongsTo(Order);
 
 const initDb = async () => {
 	await sequelize.sync();
@@ -131,7 +117,6 @@ module.exports = {
 	FoodItem,
 	Cart,
 	CartFoodItem,
-	Payment,
 	initDb
 };
 

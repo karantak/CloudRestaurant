@@ -1,0 +1,96 @@
+.heading {
+  text-align: center;
+  margin-top: 2rem;
+}
+.menustarter,
+.menusouth,
+.menunorth {
+  height: 380px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: white;
+  width:  1200px;
+  max-width:  95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: cover;
+}
+.menustarter {
+  background-image: url("https://images.freekaamaal.com/post_images/1606817930.jpg");
+}
+.menunorth {
+  background-image: url("https://static.toiimg.com/photo/72023714.cms");
+}
+.menusouth {
+  background-image: url("https://images.freekaamaal.com/post_images/1606817930.jpg");
+}
+.bookhead {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.menuadditem {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding:  0.75rem;
+  align-items:  center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+.menuli {
+  margin-right: auto;
+  font-size: 1.5rem;
+  list-style: none;
+  font-weight: 1000;
+  justify-self:  flex-end;
+}
+.menuliprice {
+  list-style: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.menuinputli {
+  height: 40px;
+  width: 80px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 800;
+  border: 0px;
+}
+.menubtnli {
+  height: 40px;
+  padding:  0px 0.5rem;
+  background: tomato;
+  border: 0px;
+  transition: 0.3s all;
+  color: white;
+}
+.menubtnli:hover {
+  background-color: rgb(167, 65, 47);
+  transform: scale(1.03);
+}
+.menuproceed {
+  color: black;
+  position: fixed;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid transparent;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  bottom: 8%;
+  right: 8%;
+  transition: 0.3s all;
+}
+.menuproceed a {
+  color: white;
+  text-decoration: none;
+}
+.menuproceed:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+.menuproceed a:hover {
+  color: black;
+}

@@ -1,5 +1,8 @@
+require('dotenv').config()
 const {Customer, Cart, Order, FoodItem, CartFoodItem} = require('../schema/models');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+let deliveryAddresses = {};
 const addToCart = async (req, res) => {
 	const {foodItemId, quantity} = req.body;
 	if(!foodItemId || !quantity || isNaN(quantity) || quantity < 1) 
@@ -27,7 +30,7 @@ const removeFromCart = async (req, res) => {
 	if(!cartItemId) 
 		return res.json({success: false, message: 'Incomplete information provided'});
 	await CartFoodItem.destroy({where: {id: cartItemId}});
-	return res.json({success: true, message: 'Food item removed from cart'});
+	return res.json({success: true,                                                                                                                                         message: 'Food item removed from cart'});
 }
 
 const getCart = async (req, res) => {
@@ -39,8 +42,42 @@ const getCart = async (req, res) => {
 	return res.json({success: false});
 }
 
-const placeOrder = async (req, res) => {
+const orderSession = async (req, res) => {
 	const {deliveryAddress} = req.body;
+	if(deliveryAddress && deliveryAddress != req.customer.address) 
+		deliveryAddresses[req.customer.id] = deliveryAddress;
+	const cart = await Cart.findOne({where: {customerId: req.customer.id, locked: false}});
+	if(!cart) 
+		return res.json({success: false});
+	const cartItems = await CartFoodItem.findAll({where: {cartId: cart.id}, include: [{model: FoodItem}]});
+	try {
+		const session = await stripe.checkout.sessions.create({
+			payment_method_types: ['card'],
+			mode: 'payment',
+			line_items: cartItems.map(item => {
+				return {
+					price_data: {
+						currency: 'inr',
+						product_data: {
+							name: item.foodItem.name,
+						},
+						unit_amount: item.foodItem.price * 100,
+					},
+					quantity: item.quantity
+				};
+			}),
+			success_url: 'http://localhost:3000/Success.html',
+			cancel_url: 'http://localhost:3000/Cart.html',
+
+		});
+		const paymentIntent = await stripe.paymentIntents.retrieve(session.payment_intent);
+		res.json({success: true, body: {url: session.url, clientSecret: paymentIntent['client_secret']}});
+	} catch(err) {
+		res.json({success: false, message: err.message}).status(501);
+	}
+};
+
+const placeOrder = async (req, res) => {
 	const cart = await Cart.findOne({where: {customerId: req.customer.id, locked: false}});
 	if(!cart) 
 		return res.json({success: false});
@@ -51,10 +88,10 @@ const placeOrder = async (req, res) => {
 	for(let i = 0; i < cartItems.length; ++i) 
 		totalPrice += cartItems[i].quantity * cartItems[i].foodItem.price;
 	const order = await Order.create({
-		deliveryAddress: deliveryAddress || req.customer.address,
+		deliveryAddress: deliveryAddresses[req.customer.id] || req.customer.address,
 		totalPrice,
 		cartId: cart.id,
-		customerId: req.customer.id,
+		customerId: req.customer.id
 	});
 	await Cart.update({locked: true}, {where: {id: cart.id}});
 	return res.json({success: true, message: 'Order placed'});
@@ -92,4 +129,4 @@ const getFoodMenu = async (req, res) => {
 	return res.json({success: true, body: {foodMenu}})
 }
 
-module.exports = {addToCart, removeFromCart, placeOrder, getOrders, getFoodMenu, getCart, getAllOrders, removeOrder};
+module.exports = {addToCart, removeFromCart, placeOrder, getOrders, getFoodMenu, getCart, getAllOrders, removeOrder, orderSession};

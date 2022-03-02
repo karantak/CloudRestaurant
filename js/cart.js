@@ -5,10 +5,9 @@ const addCartItems = () => {
 		totalPrice += item.quantity * item.foodItem.price;
 		$('#cart-items').append(
 			`
-			<div>
+			<div class='cartitem'>
 				<h3>${item.foodItem.name}</h3>
-				<p>Quantity - ${item.quantity}</p>
-				<p>Price - ₹${item.quantity * item.foodItem.price}</p>
+				<p>${item.quantity} for ₹${item.quantity * item.foodItem.price}</p>
 				<button onclick='removeFromCart(${item.id})'>Remove</button>
 			</div>
 			`
@@ -32,12 +31,13 @@ const removeFromCart = async (id) => {
 	});
 	const data = await response.json();
 	if(data.success) 
-		return window.location.replace('/Cart.html');
+		return window.location.replace('/html/Cart.html');
 }
 
-const placeOrder = async () => {
+const placeOrder = async (event) => {
+	event.preventDefault();
 	const deliveryAddress = $('#deliveryAddress').val();
-	const response = await fetch('http://localhost:5000/place-order', {
+	const response = await fetch('http://localhost:5000/order-session', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -46,10 +46,8 @@ const placeOrder = async () => {
 		body: JSON.stringify({deliveryAddress: deliveryAddress || ''})
 	});
 	const data = await response.json();
-	if(data.success) {
-		alert('Order placed');
-		return window.location.replace('/');
-	}
+	if(data.success) 
+		return window.location.replace(data.body.url);
 	else 
 		alert(data.message);
 };

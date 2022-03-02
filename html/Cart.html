@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="../css/Cart.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!--............................. Navbar section starts here .........................-->
+      <nav class="navbar">
+        <div class='logo'>
+          <img
+            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+          />
+        </div>
+        <ul class="links">
+          <li class="link"><a href="../index.html">Home</a></li>
+          <li class="link"><a href="Menu.html">Menu</a></li>
+          <li class="link"><a href="Cart.html">Cart</a></li>
+          <li class="link"><a href="Contactus.html">Contact Us</a></li>
+          <li class="admin-link link" style="display: none;"><a href='Admin.html'>Dashboard</a></li>
+        </ul>
+        <ul class='account-links'>
+          <li class="link notLoggedIn">
+            <a href="Login.html">Login</a>
+          </li>
+          <li class="link notLoggedIn">
+            <a href="register.html">Signup</a>
+          </li>
+          <li class="link loggedIn">
+            <p id="username"></p>
+          </li>
+          <li class="link loggedIn">
+            <input
+              type="button"
+              onclick="logout()"
+              value="Logout"
+            />
+          </li>
+        </ul>
+      </nav>
+    <!--............................... Navbar section ends here ..............................-->
+    <div class='cartcontainer'>
+      <div class="cartleft">
+        <h2 class="cartinside">Name</h2>
+        <input
+          class="cartinside"
+          id="cartname"
+          type="text"
+          placeholder="Name"
+        />
+        <h2 class="cartinside">Address</h2>
+        <textarea
+          class="cartinside"
+          id="cartadd"
+          type="text"
+          id='deliveryAddress'
+          placeholder="Address"
+        ></textarea>
+      </div>
+      <div class="cartright" id='cart-items'>
+        <h2>My Cart</h2>
+      </div>
+    </div>
+
+    <div>
+      <button class="cartorder" onclick='placeOrder(event)'>
+        Order Now
+      </button>
+    </div>
+    <script type="application/javascript" src="../js/index.js"></script>
+    <script type="application/javascript" src="../js/cart.js"></script>
+  </body>
+</html>

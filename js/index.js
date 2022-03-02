@@ -6,6 +6,7 @@ var customer = {}, isLoggedIn = false;
 // the server verifies the cookie and logs in the user
 $(document).ready(async () => {
 	$('.loggedIn').hide();
+	$('.admin-link').hide();
 	const response = await fetch('http://localhost:5000/refresh', {
 		method: 'POST',
 		credentials: 'include'
@@ -15,6 +16,9 @@ $(document).ready(async () => {
 		// all the changes in UI go here when user logs in
 		customer = data.body.customer; // has all the customer data
 		isLoggedIn = true; // will come handy in future
+		if(customer.isAdmin) {
+			$('.admin-link').show();
+		}
 		$('.notLoggedIn').hide();
 		$('.loggedIn').show();
 		$('#username').text(customer.name);
@@ -44,7 +48,7 @@ const register = async () => {
 		const data = await response.json();
 		if(!data.success) // if request is unsuccessful show the error message as alert
 			return alert(data.message); // we can do something better here but we are in a rush :(
-		window.location.replace('/index.html');
+		window.location.replace('/');
 	}
 	else 
 		alert('Fill all the fields');
@@ -65,7 +69,7 @@ const login = async () => {
 		const data = await response.json();
 		if(!data.success) 
 			return alert(data.message);
-		window.location.replace('/index.html');
+		window.location.replace('/');
 		
 	}
 	else 
@@ -80,6 +84,5 @@ const logout = async () => {
 	})
 	console.log(response)
 	customer= null
-	window.location.replace('/index.html');
+	window.location.replace('/i');
 }
-

@@ -9,31 +9,36 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Home.css" />
-    <link rel="stylesheet" href="Admin.css" />
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="../css/Admin.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <nav class="navbar">
-        <ul class="navul">
+        <div class='logo'>
           <img
-            class="Nav-logo"
             src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
           />
-          <li class="home-nav-left"><a href="index.html">Home</a></li>
-          <li class="home-nav-left"><a href="Menu.html">Menu</a></li>
-          <li class="home-nav-left"><a href="Cart.html">Cart</a></li>
-          <li class="home-nav-left"><a href="#">Contact us</a></li>
-          <li class="home-nav-right notLoggedIn">
+        </div>
+        <ul class="links">
+          <li class="link"><a href="../index.html">Home</a></li>
+          <li class="link"><a href="Menu.html">Menu</a></li>
+          <li class="link"><a href="Cart.html">Cart</a></li>
+          <li class="link"><a href="Contactus.html">Contact Us</a></li>
+          <li class="admin-link link" style="display: none;"><a href='Admin.html'>Dashboard</a></li>
+        </ul>
+        <ul class='account-links'>
+          <li class="link notLoggedIn">
             <a href="Login.html">Login</a>
           </li>
-          <li class="home-nav-right notLoggedIn">
+          <li class="link notLoggedIn">
             <a href="register.html">Signup</a>
           </li>
-          <li class="home-nav-right loggedIn">
+          <li class="link loggedIn">
             <p id="username"></p>
           </li>
-          <li class="home-nav-right loggedIn">
+          <li class="link loggedIn">
             <input
               type="button"
               onclick="logout()"
@@ -41,13 +46,16 @@
             />
           </li>
         </ul>
-      </nav>
+      </nav>      
       <div class='admin'>
-        <h1>All Orders</h1>
-        <table id='orders-table'>
-        </table>
+        <h1>Admin Dashboard</h1>
+        <h2>All Orders</h2>
+        <div class='table-container'>
+          <table id='orders-table'>
+          </table>
+        </div>
       </div>
   </body>
-  <script type="application/javascript" src="js/index.js"></script>
-  <script type="application/javascript" src="js/admin.js"></script>
+  <script type="application/javascript" src="../js/index.js"></script>
+  <script type="application/javascript" src="../js/admin.js"></script>
 </html>

@@ -15,7 +15,7 @@ const addFoodItems = (foodMenu, foodType, containerId) => {
 
 const addToCart = async (id) => {
 	if(!isLoggedIn) 
-		return window.location.replace('/Login.html');
+		return window.location.replace('/html/Login.html');
 	const quantity = Number($(`#quantity-${id}`).val());
 	if(!quantity || quantity < 1) {
 		alert('Quantity should be atleast 1');

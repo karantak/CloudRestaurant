@@ -5,7 +5,7 @@ const showOrders = () => {
 		$('#orders-table').empty();
 		$('#orders-table').append(
 			`
-			<tr>
+			<tr class='table-heading'>
 				<th>ID</th>
 				<th>Name</th>
 				<th>Delivery Address</th>
@@ -20,7 +20,7 @@ const showOrders = () => {
 		orders.forEach(order => {
 			$('#orders-table').append(
 				`
-				<tr>
+				<tr class='table-row'>
 					<td valign='top'>${order.id}</td>
 					<td valign='top'>${order.customer.name}</td>
 					<td valign='top'>${order.deliveryAddress}</td>
@@ -28,7 +28,7 @@ const showOrders = () => {
 					<td valign='top'>${order.customer.mobileNumber || ''}</td>
 					<td valign='top'>₹${order.totalPrice}</td>
 					<td valign='top'>
-						<ul id='items-${order.id}'>
+						<ul class='table-items' id='items-${order.id}'>
 						</ul>
 					</td>
 					<td valign='top'>
@@ -42,8 +42,7 @@ const showOrders = () => {
 					`
 					<li>
 						<p>${item.foodItem.name}</p>
-						<p>Quantity - ${item.quantity}</p>
-						<p>Price - ${item.quantity * item.foodItem.price}</p>
+						<p>${item.quantity} for ₹${item.quantity * item.foodItem.price}</p>
 					</li>
 					`
 				);
@@ -57,7 +56,7 @@ const removeOrder = async (orderId) => {
 	const data = await response.json();
 	if(data.success) {
 		alert('Order marked as delivered');
-		return window.location.replace('/Admin.html');
+		return window.location.replace('/html/Admin.html');
 	}
 	else 
 		alert('Some error occured! Try again');

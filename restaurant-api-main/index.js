@@ -21,6 +21,7 @@ const {
 	removeFromCart,
 	getAllOrders,
 	removeOrder,
+	orderSession,
 } = require("./controller/mainController");
 const populate = require('./utils/populate');
 const {initDb} = require('./schema/models');
@@ -60,6 +61,7 @@ app.post("/login", login);
 app.post("/refresh", verifyAccessToken, refresh);
 app.delete("/logout", verifyAccessToken, logout);
 
+app.post("/order-session", verifyAccessToken, orderSession)
 app.post("/add-to-cart", verifyAccessToken, addToCart);
 app.post("/remove-from-cart", verifyAccessToken, removeFromCart);
 app.post("/place-order", verifyAccessToken, placeOrder);

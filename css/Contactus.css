@@ -1,0 +1,48 @@
+.contactcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: 95%;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+.contactinside{
+    width: 80%;
+    display: block;
+    padding: 0.25rem;
+    font-weight: bold;
+    margin: 1.5rem auto;
+    border:  0px;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+.contactinsidelabel{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.othercontacts{
+    margin: 0px auto;  
+}
+.contactsubmit {
+    transition: 0.3s transform;
+    text-align: center;
+}
+.contactsubmit a {
+  height: 40px;
+  padding:  0px 0.5rem;
+  background: tomato;
+  color: white;
+  border: 0px;
+  transition: 0.3s all;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.contactsubmit a:hover {
+    background-color: rgb(167, 65, 47);
+    transform: scale(1.03);
+}
+.othercontacts img{
+    height: 30px;
+    width:  30px;
+    margin: 3rem 1rem;
+}
