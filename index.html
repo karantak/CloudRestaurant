@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/Home.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
@@ -17,68 +17,64 @@
     <!--............................... HOME SECTION STARTS HERE .........................-->
 
     <!--............................. Navbar section starts here .........................-->
-      <nav class="navbar">
-        <div class='logo'>
-          <img
-            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
-          />
-        </div>
-        <ul class="links">
-          <li class="link"><a href="index.html">Home</a></li>
-          <li class="link"><a href="html/Menu.html">Menu</a></li>
-          <li class="link"><a href="html/Cart.html">Cart</a></li>
-          <li class="link"><a href="html/Contactus.html">Contact Us</a></li>
-          <li class="admin-link link"><a href='html/Admin.html'>Dashboard</a></li>
-        </ul>
-        <ul class='account-links'>
-          <li class="link notLoggedIn">
-            <a href="html/Login.html">Login</a>
-          </li>
-          <li class="link notLoggedIn">
-            <a href="html/register.html">Signup</a>
-          </li>
-          <li class="link loggedIn">
-            <p id="username"></p>
-          </li>
-          <li class="link loggedIn">
-            <input
-              type="button"
-              onclick="logout()"
-              value="Logout"
-            />
-          </li>
-        </ul>
-      </nav>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+        />
+      </div>
+      <ul class="links">
+        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="html/Menu.html">Menu</a></li>
+        <li class="link"><a href="html/Cart.html">Cart</a></li>
+        <li class="link"><a href="html/Contactus.html">Contact Us</a></li>
+        <li class="admin-link link"><a href="html/Admin.html">Dashboard</a></li>
+      </ul>
+      <ul class="account-links">
+        <li class="link notLoggedIn">
+          <a href="html/Login.html">Login</a>
+        </li>
+        <li class="link notLoggedIn">
+          <a href="html/register.html">Signup</a>
+        </li>
+        <li class="link loggedIn">
+          <p id="username"></p>
+        </li>
+        <li class="link loggedIn">
+          <input type="button" onclick="logout()" value="Logout" />
+        </li>
+      </ul>
+    </nav>
     <!--............................... Navbar section ends here ..............................-->
 
     <!--................................Slider section starts here ..............................-->
 
     <div class="carousel">
       <div class="img-slider">
-        <div class="slide active" style='background: url("images/1.jpg")'>
+        <div class="slide active" style="background: url('images/1.jpg')">
           <div class="info">
             <h2>Cloud Restaurant</h2>
             <p>
-              Cloud Restaurant is an online food-delivery service where you can online homemade 
-              food just by clicking some buttons on your phone.
+              Cloud Restaurant is an online food-delivery service where you can
+              online homemade food just by clicking some buttons on your phone.
             </p>
           </div>
         </div>
-        <div class="slide" style='background: url("images/2.jpg")'>
+        <div class="slide" style="background: url('images/2.jpg')">
           <div class="info">
             <h2>Cloud Restaurant</h2>
             <p>
-              Cloud Restaurant is an online food-delivery service where you can online homemade 
-              food just by clicking some buttons on your phone.
+              Cloud Restaurant is an online food-delivery service where you can
+              online homemade food just by clicking some buttons on your phone.
             </p>
           </div>
         </div>
-        <div class="slide" style='background: url("images/3.jpeg")'>
+        <div class="slide" style="background: url('images/3.jpeg')">
           <div class="info">
             <h2>Cloud Restaurant</h2>
             <p>
-              Cloud Restaurant is an online food-delivery service where you can online homemade 
-              food just by clicking some buttons on your phone.
+              Cloud Restaurant is an online food-delivery service where you can
+              online homemade food just by clicking some buttons on your phone.
             </p>
           </div>
         </div>
@@ -94,13 +90,22 @@
 
     <!--............................. Button section starts here......................... -->
     <div class="waytomenu">
-      <button class="btnmenu stater" onclick="document.location='html/Menu.html#starter'">
+      <button
+        class="btnmenu stater"
+        onclick="document.location='html/Menu.html#starter'"
+      >
         Starter
       </button>
-      <button class="btnmenu north" onclick="document.location='html/Menu.html#north'">
+      <button
+        class="btnmenu north"
+        onclick="document.location='html/Menu.html#north'"
+      >
         North
       </button>
-      <button class="btnmenu south" onclick="document.location='html/Menu.html#south'">
+      <button
+        class="btnmenu south"
+        onclick="document.location='html/Menu.html#south'"
+      >
         South
       </button>
     </div>
