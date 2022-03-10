@@ -61,6 +61,7 @@
   height: 500px;
   overflow: hidden;
   background-size: cover !important;
+  background-repeat: no-repeat;
 }
 .img-slider .slide .info {
   padding: 1rem;

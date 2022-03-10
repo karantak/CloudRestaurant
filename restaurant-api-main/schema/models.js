@@ -119,10 +119,3 @@ module.exports = {
 	CartFoodItem,
 	initDb
 };
-
-/*
-Discord Bot Requirements
-1. Monitor Phishing & Scam links
-2. Role giving feature with logs
-3. Sales and listing of the NFT marketplace
-*/
