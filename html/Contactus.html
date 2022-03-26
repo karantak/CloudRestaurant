@@ -1,90 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="../css/index.css"/>
-		<link rel="stylesheet" href="../css/Home.css" />
-		<link rel="stylesheet" href="../css/Contactus.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="../css/Contactus.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
 
-	<body>
-		<!--............................. Navbar section starts here .........................-->
-			<nav class="navbar">
-        <div class='logo'>
-          <img
-            src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
-          />
-        </div>
-        <ul class="links">
-          <li class="link"><a href="../index.html">Home</a></li>
-          <li class="link"><a href="Menu.html">Menu</a></li>
-          <li class="link"><a href="Cart.html">Cart</a></li>
-          <li class="link"><a href="Contactus.html">Contact Us</a></li>
-          <li class="admin-link link" style="display: none;"><a href='Admin.html'>Dashboard</a></li>
-        </ul>
-        <ul class='account-links'>
-          <li class="link notLoggedIn">
-            <a href="Login.html">Login</a>
-          </li>
-          <li class="link notLoggedIn">
-            <a href="register.html">Signup</a>
-          </li>
-          <li class="link loggedIn">
-            <p id="username"></p>
-          </li>
-          <li class="link loggedIn">
-            <input
-              type="button"
-              onclick="logout()"
-              value="Logout"
-            />
-          </li>
-        </ul>
-      </nav>
+  <body>
+    <!--............................. Navbar section starts here .........................-->
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/000000/external-restaurant-building-photo3ideastudio-lineal-color-photo3ideastudio.png"
+        />
+      </div>
+      <ul class="links">
+        <li class="link"><a href="../index.html">Home</a></li>
+        <li class="link"><a href="Menu.html">Menu</a></li>
+        <li class="link"><a href="Cart.html">Cart</a></li>
+        <li class="link"><a href="Contactus.html">Contact Us</a></li>
+        <li class="admin-link link" style="display: none">
+          <a href="Admin.html">Dashboard</a>
+        </li>
+      </ul>
+      <ul class="account-links">
+        <li class="link notLoggedIn">
+          <a href="Login.html">Login</a>
+        </li>
+        <li class="link notLoggedIn">
+          <a href="register.html">Signup</a>
+        </li>
+        <li class="link loggedIn">
+          <p id="username"></p>
+        </li>
+        <li class="link loggedIn">
+          <input type="button" onclick="logout()" value="Logout" />
+        </li>
+      </ul>
+    </nav>
 
-		<!--............................... Navbar section ends here ..............................-->
+    <!--............................... Navbar section ends here ..............................-->
 
-		<!--............................... CONTACTBOX section STARTShere ..............................-->
+    <!--............................... CONTACTBOX section STARTShere ..............................-->
 
-		<div class="contactcontainer">
-			<div>
-				<h2 class="contactinsidelabel">Email Us</h2>
-				<input class="contactinside" type="email" />
-				<h2 class="contactinsidelabel">Write us</h2>
-				<input class="contactinside" id="writebox" type="email" />
-			</div>
+    <div class="contactcontainer">
+      <div>
+        <h2 class="contactinsidelabel">Email Us</h2>
+        <input class="contactinside" type="email" />
+        <h2 class="contactinsidelabel">Write us</h2>
+        <input class="contactinside" id="writebox" type="email" />
+      </div>
 
-			<!--............................... CONTACTBOX section ends here ..............................-->
+      <!--............................... CONTACTBOX section ends here ..............................-->
 
-			<!--............................... PROCEED BUTTON section STARTS here ..............................-->
-			<div class='contactsubmit'>
-					<a href="Cart.html">Proceed</a>
-			</div>
+      <!--............................... PROCEED BUTTON section STARTS here ..............................-->
+      <div class="contactsubmit">
+        <a href="Cart.html">Proceed</a>
+      </div>
 
-			<!--............................... PROCEED BUTTON section ends here ..............................-->
+      <!--............................... PROCEED BUTTON section ends here ..............................-->
 
-			<!--............................... LOGO section STARTS here ..............................-->
-			<div class="othercontacts">
-				<a href="gmail.com"
-					><img src="../images/google.png" alt="" class="contactlogo"
-				/></a>
-				<a href="https://www.facebook.com/"
-					><img src="../images/facebook.png" alt="" class="contactlogo"
-				/></a>
-				<a href="Instagram.com"
-					><img src="../images/Instagram.png" alt="" class="contactlogo"
-				/></a>
-			</div>
-			<!--............................... LOGO section ENDS here ..............................-->
-		</div>
-		<script type="application/javascript" src="../js/index.js"></script>
-	</body>
+      <!--............................... LOGO section STARTS here ..............................-->
+      <div class="othercontacts">
+        <a href="gmail.com"
+          ><img src="../images/google.png" alt="" class="contactlogo"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="../images/facebook.png" alt="" class="contactlogo"
+        /></a>
+        <a href="Instagram.com"
+          ><img src="../images/Instagram.png" alt="" class="contactlogo"
+        /></a>
+      </div>
+      <!--............................... LOGO section ENDS here ..............................-->
+    </div>
+    <script type="application/javascript" src="../js/index.js"></script>
+  </body>
 </html>
