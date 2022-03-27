@@ -34,15 +34,17 @@ const register = async () => {
 		address = $("#address").val(),
 		email = $("#email").val(),
 		mobileNumber = $("#mobileNumber").val(),
-		password = $("#password").val();
-	if(name && address && email && mobileNumber && password) {
+		password = $("#password").val(),
+		confirmPassword = $('#confirmPassword').val();
+	console.log(confirmPassword);
+	if(name && address && email && mobileNumber && password && confirmPassword) {
 		// sending a request only if all the fields are present
 		const response = await fetch('http://localhost:5000/signup', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({name, address, email, mobileNumber, password}),
+			body: JSON.stringify({name, address, email, mobileNumber, password, confirmPassword}),
 			credentials: 'include'
 		});
 		const data = await response.json();
@@ -56,14 +58,14 @@ const register = async () => {
 
 // similar to register
 const login = async () => {
-	const name = $('#name').val(), password = $('#password').val();
-	if(name && password) {
+	const email = $('#email').val(), password = $('#password').val();
+	if(email && password) {
 		const response = await fetch('http://localhost:5000/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({name, password}),
+			body: JSON.stringify({email, password}),
 			credentials: 'include'
 		})
 		const data = await response.json();
@@ -81,11 +83,8 @@ const logout = async () => {
 	const response = await fetch('http://localhost:5000/logout', {
 		method: 'DELETE',
 		credentials: 'include'
-	});
-	const data = await response.json();
-	if(data.success) {
-		customer= null;
-		isLoggedIn = false;
-		window.location.replace('/');
-	}
+	})
+	customer = null;
+	isLoggedIn = false;
+	window.location.replace('/');
 }

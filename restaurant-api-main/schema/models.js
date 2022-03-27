@@ -1,6 +1,6 @@
 const {Sequelize, Model, DataTypes} = require('sequelize');
 
-const sequelize = new Sequelize('Cloudrestaurant', 'root', 'Karan@123@', {
+const sequelize = new Sequelize('Cloudrestaurant', 'root', 'Yashwelcome1', {
 	dialect: 'mysql',
 })
 
@@ -119,3 +119,10 @@ module.exports = {
 	CartFoodItem,
 	initDb
 };
+
+/*
+Discord Bot Requirements
+1. Monitor Phishing & Scam links
+2. Role giving feature with logs
+3. Sales and listing of the NFT marketplace
+*/
